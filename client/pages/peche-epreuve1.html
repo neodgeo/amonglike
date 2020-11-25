@@ -1,0 +1,256 @@
+<template name="pecheEpreuve1">
+  <style>
+    #scene{
+      width: 850px;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+
+    #perso{
+      position: absolute;
+      padding-top: 420px;
+      padding-left: 200px;
+      width: 90px;
+      height: 120px;
+      transition: .2s ease-in-out;
+    }
+  </style>
+
+    <img id="scene" src="img/scenep1.jpg"/>
+    <img id="perso" src="img/perso.png">
+    <div id="chat">
+      <div class="pp">
+        <img src="img/peche.png" />
+        <h4>Peche Refraction</h4>
+      </div>
+      <p class="msg1">Qu’est-ce-que c’est que cette salle ?</p>
+      <p class="msg2">Toucher ces rayons ne semblent pas une bonne idée. Dans le livret, il est dit que cette cape est réglée pour être invisible dans une lumière de fréquence 500 nm.</p>
+      <p class="msg3">C’est ça ! Ne passe que par les rayons de couleurs jaune ! </p>
+      <button onclick="displayMsg()">></button>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+
+    var perso = document.querySelector('#perso');
+    var marginLeft = 0;
+    var marginTop = 0;
+
+
+
+    document.onkeydown = checkKey;
+    function checkKey(e) {
+        // HAUT DROITE
+        if (e.keyCode == '38') {
+          if (marginTop == -105 && marginLeft == 300){
+            console.log('Limite Haut Droite')
+          } else if (marginTop == -190 && marginLeft == 275){
+            console.log('Limite Haut Droite')
+          } else {
+            perso.src = "img/perso.gif";
+            marginTop -= 15;
+            perso.style.marginTop =  marginTop + 'px';
+            //perso.style.transform = 'rotateY(360deg)';
+            marginLeft += 25;
+            perso.style.marginLeft =  marginLeft + 'px';
+            //perso.style.transform = 'rotateY(180deg)';
+            var myVar = setInterval(myTimer, 1000);
+            function myTimer() {
+              perso.src = "img/perso.png";
+            }
+          }
+        // BAS GAUCHE
+        } else if (e.keyCode == '40') {
+            if (marginTop == 0 && marginLeft == 0){
+              console.log('Limite Bas Gauche')
+            } else if (marginTop == -10 && marginLeft == -25){
+              console.log('Limite Bas Gauche')
+            } else if (marginTop == 10 && marginLeft == 25){
+              console.log('Limite Bas Gauche')
+            } else if (marginTop == 40 && marginLeft == -25){
+              console.log('Limite Bas Gauche')
+            } else if (marginTop == 50 && marginLeft == 0){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 60 && marginLeft == 25){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 70 && marginLeft == 50){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 80 && marginLeft == 75){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 90 && marginLeft == 100){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 100 && marginLeft == 125){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 110 && marginLeft == 150){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 120 && marginLeft == 175){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 130 && marginLeft == 200){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 140 && marginLeft == 225){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 150 && marginLeft == 250){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 160 && marginLeft == 275){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 170 && marginLeft == 300){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == 180 && marginLeft == 325){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == -5 && marginLeft == 175){
+              console.log('Limite Bas Gauche')
+            }else if (marginTop == -40 && marginLeft == 275){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -30 && marginLeft == 300){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 325){
+              console.log('Limite Bas Droite')
+            } else {
+              perso.src = "img/perso.gif";
+              marginTop += 15;
+              perso.style.marginTop =  marginTop + 'px';
+              //perso.style.transform = 'rotateY(360deg)';
+              marginLeft -= 25;
+              perso.style.marginLeft =  marginLeft + 'px';
+              //perso.style.transform = 'rotateY(360deg)';
+              var myVar = setInterval(myTimer, 1000);
+              function myTimer() {
+                perso.src = "img/perso.png";
+              }
+            }
+        // HAUT GAUCHE
+        } else if (e.keyCode == '37') {
+          if (marginTop == 40 && marginLeft == -25){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == 25 && marginLeft == 0){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -10 && marginLeft == -25){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -25 && marginLeft == 0){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -40 && marginLeft == 25){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -55 && marginLeft == 50){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -70 && marginLeft == 75){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -85 && marginLeft == 100){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -100 && marginLeft == 125){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -115 && marginLeft == 150){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -130 && marginLeft == 175){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -145 && marginLeft == 200){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -160 && marginLeft == 225){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -175 && marginLeft == 250){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -190 && marginLeft == 275){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -105 && marginLeft == 300){
+            console.log('Limite Haut Gauche')
+          } else if (marginTop == -90 && marginLeft == 275){
+            console.log('Limite Haut Gauche')
+          } else {
+            perso.src = "img/perso.gif";
+            marginTop -= 10;
+            perso.style.marginTop =  marginTop + 'px';
+            //perso.style.transform = 'rotateY(360deg)';
+            marginLeft -= 25;
+            perso.style.marginLeft =  marginLeft + 'px';
+            //perso.style.transform = 'rotateY(360deg)';
+            var myVar = setInterval(myTimer, 1000);
+            function myTimer() {
+              perso.src = "img/perso.png";
+            }
+          }
+        // BAS DROITE
+        } else if (e.keyCode == '39') {
+          if (marginTop == 30 && marginLeft == 575){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 10 && marginLeft == 25){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -5 && marginLeft == 50){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -5 && marginLeft == 175){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 200){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -35 && marginLeft == 225){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 325){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 200){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 225){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 250){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 275){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 300){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 325){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -35 && marginLeft == 350){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -50 && marginLeft == 375){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -65 && marginLeft == 400){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -80 && marginLeft == 425){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -95 && marginLeft == 450){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -110 && marginLeft == 475){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -20 && marginLeft == 75){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == 45 && marginLeft == 550){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 60 && marginLeft == 525){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 75 && marginLeft == 500){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 90 && marginLeft == 475){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 105 && marginLeft == 450){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 120 && marginLeft == 425){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 135 && marginLeft == 400){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 150 && marginLeft == 375){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 165 && marginLeft == 350){
+            console.log('Limite Bas Droite')
+          }else if (marginTop == 180 && marginLeft == 325){
+            console.log('Limite Bas Droite')
+          } else {
+            perso.src = "img/perso.gif";
+            marginTop += 10;
+            perso.style.marginTop =  marginTop + 'px';
+            //perso.style.transform = 'rotateY(360deg)';
+            marginLeft += 25;
+            perso.style.marginLeft =  marginLeft + 'px';
+            //perso.style.transform = 'rotateY(180deg)';
+            var myVar = setInterval(myTimer, 1000);
+            function myTimer() {
+              perso.src = "img/perso.png";
+            }
+          }
+        } else if (e.keyCode == '32') {
+            perso.src = "img/perso.gif";
+            var myVar = setInterval(myTimer, 1000);
+            function myTimer() {
+              perso.src = "img/perso.png";
+            }
+        }
+    }
+    </script>
+</template>

@@ -1,0 +1,48 @@
+<template name="fraiseEpreuve1">
+  <style>
+    #scene{
+      width: 700px;
+      margin-left: 100px;
+      margin-top: 50px;
+    }
+
+    #perso{
+      position: absolute;
+      padding-top: 260px;
+      padding-left: 300px;
+      width: 45px;
+      height: 60px;
+      transition: 2s ease-in-out;
+    }
+  </style>
+
+    <img id="scene" src="img/scenef1.jpg" onclick="rayon()"/>
+    <img id="perso" src="img/perso.png">
+    <div id="chat">
+      <div class="pp">
+        <img src="img/fraise.png" />
+        <h4>Fraise Mirage</h4>
+      </div>
+      <p class="msg1">Il semble que cette salle soit infestée de rayon de détections. </p>
+      <p class="msg2">C’n’est pas bon... On ne peux pas les désactiver, seulement les changer de couleurs.</p>
+      <p class="msg3">Ah, la cape est réglée pour ne marcher qu’avec une lumière de fréquence 500 nm. Tu penses qu’on pourrait rendre tous les rayons jaunes ?</p>
+      <button onclick="displayMsg()">></button>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+
+    var perso = document.querySelector('#perso');
+    var scene = document.querySelector('#scene');
+    var marginLeft = 0;
+    var marginTop = 0;
+
+    function rayon() {
+      perso.src = "img/perso.gif";
+      scene.src = "img/scenef1b.jpg"
+      perso.style.marginLeft = "240px"
+    }
+    </script>
+</template>
