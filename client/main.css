@@ -52,3 +52,28 @@ button{
   padding: 10px;
   margin-left: calc(13vw - 25px);
 }
+
+
+#scenep1{
+  width: 700px;
+  margin-left: 100px;
+}
+
+#scenef1{
+  width: 800px;
+  margin-left: 50px;
+}
+
+.scene{
+  margin-top: 50px;
+  position: absolute;
+}
+
+#perso{
+  position: absolute;
+  padding-top: 260px;
+  padding-left: 300px;
+  width: 45px;
+  height: 60px;
+  transition: 2s ease-in-out;
+}
