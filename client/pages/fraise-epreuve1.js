@@ -31,15 +31,23 @@ Template.fraiseEpreuve1.onRendered(function(){
 })
 
 Template.fraiseEpreuve1.events({
-    'click #scenep1': function (event, template) {
+    'click #scenef1': function (event, template) {
         var instance = Template.instance();
+        if (pecheColorData.find().fetch()[0].activeColor == 'red'){
+          pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'yellow'}})
+          fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'yellow'}})
+          console.log('red to yellow')
+        } else if (pecheColorData.find().fetch()[0].activeColor == 'yellow'){
+          pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'red'}})
+          fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'red'}})
+          console.log('yellow to red')
+        } else {
+          console.log('?')
+        }
+        var perso = document.querySelector('#persof1');
 
-        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'yellow'}})
-        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'yellow'}})
-        var perso = document.querySelector('#perso');
-
-        perso.src = "img/perso.gif";
-        perso.style.marginLeft = "240px"
+        // perso.src = "img/persomove.png";
+        // perso.style.marginLeft = "240px"
 
       },
 })
@@ -52,6 +60,5 @@ Template.fraiseEpreuve1.helpers({
     imageScene: function(){
         var fraiseColor = fraiseColorData.findOne({_id:Template.instance().fraiseId.get()})
         return fraiseColor[fraiseColor.activeColor]
-
     }
 });

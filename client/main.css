@@ -53,27 +53,145 @@ button{
   margin-left: calc(13vw - 25px);
 }
 
+#labo{
+  margin-top: 50px;
+}
 
 #scenep1{
-  width: 700px;
-  margin-left: 100px;
+  width: 900px;
+}
+
+#scenep2{
+  width: 650px;
+  margin-left: 150px;
+}
+
+#scenep3{
+  width: 650px;
+  margin-left: 130px;
 }
 
 #scenef1{
-  width: 800px;
+  width: 750px;
   margin-left: 50px;
 }
 
 .scene{
-  margin-top: 50px;
   position: absolute;
 }
 
-#perso{
+#persolabo{
+  position: absolute;
+  padding-top: 260px;
+  padding-left: 110px;
+  width: 40px;
+  height: 60px;
+  transition: .2s ease-in-out;
+}
+
+#persof1{
   position: absolute;
   padding-top: 260px;
   padding-left: 300px;
   width: 45px;
   height: 60px;
   transition: 2s ease-in-out;
+}
+
+#persop1{
+  position: absolute;
+  padding-top: 420px;
+  padding-left: 150px;
+  width: 75px;
+  height: 100px;
+  transition: .2s ease-in-out;
+}
+
+#persop2{
+  position: absolute;
+  padding-top: 120px;
+  padding-left: 300px;
+  width: 75px;
+  height: 100px;
+  transition: .2s ease-in-out;
+}
+
+#persop3{
+  position: absolute;
+  padding-top: 420px;
+  padding-left: 620px;
+  width: 75px;
+  height: 100px;
+  transition: .2s ease-in-out;
+}
+
+/* TEAMS */
+
+#teams{
+  flex-direction: column;
+}
+
+.choix_fraise {
+border-color: #ce2c64;
+color: #ce2c64;
+font-weight : bold;
+transition: all 0.1s;
+}
+
+.ch_cadre {
+padding: 3em;
+border: 5px solid;
+flex: 1;
+margin: 1em;
+z-index: 1;
+}
+
+.choix_peche {
+border-color:#f9a978;
+color:#f9a978;
+font-weight : bold;
+transition: all 0.1s;
+}
+
+.choix_peche:hover {
+color: white;
+background:#f9a978;
+border-color: white;
+transition: all 0.5s;
+cursor: pointer;
+}
+
+.choix_fraise:hover {
+color: white;
+background: #ce2c64;
+border-color: white;
+transition: all 0.5s;
+cursor: pointer;
+}
+
+.choix_eq{
+display: flex;
+text-align: center;
+width: 50vw;
+margin: auto;
+padding-left: 5%;
+}
+.choix_eq p{
+  display: contents;
+  color: white;
+}
+
+.choix_eq img{
+  width: 300px;
+}
+
+h4{
+  color: #fff;
+  text-align: center;
+  width: 100vw;
+}
+
+a{
+  text-decoration: none;
+  width: 45%;
 }

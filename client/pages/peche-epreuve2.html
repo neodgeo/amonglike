@@ -1,6 +1,6 @@
-<template name="pecheEpreuve1">
-  <img id="scenep1" class="scene" src="img/{{imageScene}}"/>
-  <img id="persop1" src="img/perso.png">
+<template name="pecheEpreuve2">
+  <img id="scenep2" class="scene" src="img/salle_2.png"/>
+  <img id="persop2" src="img/perso.png">
   <div id="chat">
     <div class="pp">
       <img src="img/peche.png" />
@@ -42,7 +42,7 @@
   }
   }
 
-  var perso = document.querySelector('#persop1');
+  var perso = document.querySelector('#persop2');
   var marginLeft = 0;
   var marginTop = 0;
 
@@ -110,11 +110,11 @@
           }else if (marginTop == -5 && marginLeft == 175){
             console.log('Limite Bas Gauche')
           }else if (marginTop == -40 && marginLeft == 275){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -30 && marginLeft == 300){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 325){
-            console.log('Limite Bas Droite')
+              console.log('Limite Bas Droite')
+          }else if (marginTop == -30 && marginLeft == 300){
+              console.log('Limite Bas Droite')
+          }else if (marginTop == 390 && marginLeft == -50){
+              window.location = 'pecheEpreuve3'
           } else {
             perso.src = "img/persomove.png";
             marginTop += 15;
@@ -239,7 +239,7 @@
           console.log('Limite Bas Droite')
         }else if (marginTop == 180 && marginLeft == 325){
           console.log('Limite Bas Droite')
-        }else if (marginTop == -120 && marginLeft == 550){
+        }else if (marginTop == -120 && marginLeft == 600){
           window.location = 'http://localhost:3000/pecheEpreuve2'
         } else {
           perso.src = "img/persomove.png";
