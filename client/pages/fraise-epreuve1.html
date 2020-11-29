@@ -1,6 +1,15 @@
 <template name="fraiseEpreuve1">
     <img id="scenef1" class="scene" src="img/{{imageScene}}" />
     <img id="persof1" src="img/perso.png">
+    <div id="fqInput">
+      <div id="fq400"></div>
+      <div id="fq450"></div>
+      <div id="fq500"></div>
+      <div id="fq550"></div>
+      <div id="fq600"></div>
+      <div id="fq650"></div>
+      <div id="fq700"></div>
+    </div>
     <div id="chat">
       <div class="pp">
         <img src="img/fraise.png" />
@@ -18,7 +27,14 @@
 
     var msg1 = document.querySelector('.msg1'),
     msg2 = document.querySelector('.msg2'),
-    msg3 = document.querySelector('.msg3')
+    msg3 = document.querySelector('.msg3'),
+    fq400 = document.querySelector('#fq400'),
+    fq450 = document.querySelector('#fq450'),
+    fq500 = document.querySelector('#fq500'),
+    fq550 = document.querySelector('#fq550'),
+    fq600 = document.querySelector('#fq600'),
+    fq650 = document.querySelector('#fq650'),
+    fq700 = document.querySelector('#fq700'),
 
 
     var step = 0
