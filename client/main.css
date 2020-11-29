@@ -54,9 +54,8 @@ button{
 }
 
 #labo{
-  margin-top: 50px;
-  margin-left: 50px;
-  width: 850px;
+  margin-left: 20px;
+  width: 900px;
 }
 
 #scenep1{
@@ -64,14 +63,13 @@ button{
 }
 
 #scenep2{
-  width: 650px;
-  margin-left: 150px;
-  margin-top: 50px;
+  width: 1000px;
+  margin-top: -30px;
 }
 
 #scenep3{
-  width: 650px;
-  margin-left: 130px;
+  width: 1000px;
+  margin-top: -30px;
 }
 
 #scenef1{
@@ -85,8 +83,8 @@ button{
 
 #persolabo{
   position: absolute;
-  padding-top: 260px;
-  padding-left: 110px;
+  padding-top: 280px;
+  padding-left: 140px;
   width: 40px;
   height: 60px;
   transition: .2s ease-in-out;
@@ -104,7 +102,7 @@ button{
 #persop1{
   position: absolute;
   padding-top: 420px;
-  padding-left: 150px;
+  padding-left: 200px;
   width: 75px;
   height: 100px;
   transition: .2s ease-in-out;
@@ -122,7 +120,7 @@ button{
 #persop3{
   position: absolute;
   padding-top: 420px;
-  padding-left: 620px;
+  padding-left: 650px;
   width: 75px;
   height: 100px;
   transition: .2s ease-in-out;

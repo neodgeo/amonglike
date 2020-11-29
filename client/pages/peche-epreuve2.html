@@ -1,5 +1,5 @@
 <template name="pecheEpreuve2">
-  <img id="scenep2" class="scene" src="img/salle_2.png"/>
+  <img id="scenep2" class="scene" src="img/salle2.jpg"/>
   <img id="persop2" src="img/perso.png">
   <div id="chat">
     <div class="pp">
@@ -114,6 +114,8 @@
           }else if (marginTop == -30 && marginLeft == 300){
               console.log('Limite Bas Droite')
           }else if (marginTop == 390 && marginLeft == -50){
+              window.location = 'pecheEpreuve3'
+          }else if (marginTop == 405 && marginLeft == -25){
               window.location = 'pecheEpreuve3'
           } else {
             perso.src = "img/persomove.png";

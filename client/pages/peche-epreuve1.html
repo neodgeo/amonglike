@@ -42,32 +42,77 @@
   }
   }
 
-  var perso = document.querySelector('#persop1');
-  var marginLeft = 0;
-  var marginTop = 0;
+  var perso = document.querySelector('#persop1'),
+  scene = document.querySelector('#scenep1')
 
+  marginLeft = 0,
+  marginTop = 0
 
+  function hautDroite() {
+    perso.src = "img/persomove.png";
+    marginTop -= 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft += 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    var myVar = setInterval(myTimer, 1000);
+    function myTimer() {
+      perso.src = "img/perso.png";
+    }
+  }
+
+  function basGauche() {
+    perso.src = "img/persomove.png";
+    marginTop += 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft -= 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    var myVar = setInterval(myTimer, 1000);
+    function myTimer() {
+      perso.src = "img/perso.png";
+    }
+  }
+
+  function basDroite() {
+    perso.src = "img/persomove.png";
+    marginTop += 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft += 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    var myVar = setInterval(myTimer, 1000);
+    function myTimer() {
+      perso.src = "img/perso.png";
+    }
+  }
+
+  function hautGauche() {
+    perso.src = "img/persomove.png";
+    marginTop -= 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft -= 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    var myVar = setInterval(myTimer, 1000);
+    function myTimer() {
+      perso.src = "img/perso.png";
+    }
+  }
 
   document.onkeydown = checkKey;
   function checkKey(e) {
+
       // HAUT DROITE
       if (e.keyCode == '38') {
         if (marginTop == -105 && marginLeft == 300){
           console.log('Limite Haut Droite')
         } else if (marginTop == -190 && marginLeft == 275){
           console.log('Limite Haut Droite')
-        } else {
-          perso.src = "img/persomove.png";
-          marginTop -= 15;
-          perso.style.marginTop =  marginTop + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          marginLeft += 25;
-          perso.style.marginLeft =  marginLeft + 'px';
-          //perso.style.transform = 'rotateY(180deg)';
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
+        } else if (marginTop == -60 && marginLeft == 100) {
+          if (scene.src == 'http://localhost:3000/img/salle_1_jaune.gif'){
+            hautDroite()
+          } else {
+            alert('Attention !!! les rayons ne sont pas réglés sur la bonne fréquence')
           }
+        } else {
+          hautDroite()
         }
       // BAS GAUCHE
       } else if (e.keyCode == '40') {
@@ -116,17 +161,7 @@
         }else if (marginTop == -20 && marginLeft == 325){
             console.log('Limite Bas Droite')
           } else {
-            perso.src = "img/persomove.png";
-            marginTop += 15;
-            perso.style.marginTop =  marginTop + 'px';
-            //perso.style.transform = 'rotateY(360deg)';
-            marginLeft -= 25;
-            perso.style.marginLeft =  marginLeft + 'px';
-            //perso.style.transform = 'rotateY(360deg)';
-            var myVar = setInterval(myTimer, 1000);
-            function myTimer() {
-              perso.src = "img/perso.png";
-            }
+            basGauche()
           }
       // HAUT GAUCHE
       } else if (e.keyCode == '37') {
@@ -165,17 +200,7 @@
         } else if (marginTop == -90 && marginLeft == 275){
           console.log('Limite Haut Gauche')
         } else {
-          perso.src = "img/persomove.png";
-          marginTop -= 15;
-          perso.style.marginTop =  marginTop + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          marginLeft -= 25;
-          perso.style.marginLeft =  marginLeft + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
+          hautGauche()
         }
       // BAS DROITE
       } else if (e.keyCode == '39') {
@@ -239,27 +264,11 @@
           console.log('Limite Bas Droite')
         }else if (marginTop == 180 && marginLeft == 325){
           console.log('Limite Bas Droite')
-        }else if (marginTop == -120 && marginLeft == 550){
+        }else if (marginTop == -120 && marginLeft == 500){
           window.location = 'http://localhost:3000/pecheEpreuve2'
         } else {
-          perso.src = "img/persomove.png";
-          marginTop += 15;
-          perso.style.marginTop =  marginTop + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          marginLeft += 25;
-          perso.style.marginLeft =  marginLeft + 'px';
-          //perso.style.transform = 'rotateY(180deg)';
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
+          basDroite()
         }
-      } else if (e.keyCode == '32') {
-          perso.src = "img/persomove.png";
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
       }
   }
   </script>
