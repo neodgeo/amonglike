@@ -10,16 +10,48 @@ const fraiseColorSchema = new SimpleSchema({
         activeColor:{
             type:String,
             label:"which color is activated",
-            allowedValues:['red','yellow']
+            allowedValues:['darkpurple','purple','blue','turquoise','green','orange','yellow','red','darkred']
         },
-        red:{
+        darkpurple:{
             type:String,
-            label:"red image",
+            label:"darkpurple image"
+        },
+        purple:{
+            type:String,
+            label:"purple image"
+        },
+        blue:{
+            type:String,
+            label:"blue image"
+        },
+        turquoise:{
+            type:String,
+            label:"turquoise image"
+        },
+        green:{
+            type:String,
+            label:"green image"
+        },
+        orange:{
+            type:String,
+            label:"orange image"
         },
         yellow:{
             type:String,
             label:"yellow image"
-        }
+        },
+        orange:{
+          type:String,
+          label:"orange image",
+        },
+        red:{
+          type:String,
+          label:"red image",
+        },
+        darkred:{
+          type:String,
+          label:"darkred image",
+        },
 })
 
 fraiseColorData.attachSchema(fraiseColorSchema)

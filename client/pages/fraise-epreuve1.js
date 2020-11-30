@@ -32,16 +32,58 @@ Template.fraiseEpreuve1.onRendered(function(){
 
 Template.fraiseEpreuve1.events({
 
+    'click #fq400': function (event, template) {
+      var instance = Template.instance();
+        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'darkpurple'}})
+        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'darkpurple'}})
+    },
+
+    'click #fq425': function (event, template) {
+      var instance = Template.instance();
+        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'purple'}})
+        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'purple'}})
+    },
+
+    'click #fq470': function (event, template) {
+      var instance = Template.instance();
+        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'blue'}})
+        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'blue'}})
+    },
+
+    'click #fq490': function (event, template) {
+      var instance = Template.instance();
+        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'turquoise'}})
+        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'turquoise'}})
+    },
+
+    'click #fq550': function (event, template) {
+      var instance = Template.instance();
+        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'green'}})
+        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'green'}})
+    },
+
     'click #fq600': function (event, template) {
       var instance = Template.instance();
         pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'yellow'}})
         fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'yellow'}})
     },
 
-    'click #fq700': function (event, template) {
+    'click #fq630': function (event, template) {
+      var instance = Template.instance();
+        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'orange'}})
+        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'orange'}})
+    },
+
+    'click #fq665': function (event, template) {
       var instance = Template.instance();
         pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'red'}})
         fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'red'}})
+    },
+
+    'click #fq700': function (event, template) {
+      var instance = Template.instance();
+        pecheColorData.update({_id:instance.pecheId.get()},{$set:{activeColor:'darkred'}})
+        fraiseColorData.update({_id:instance.fraiseId.get()},{$set:{activeColor:'darkred'}})
     },
 })
 

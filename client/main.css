@@ -208,7 +208,7 @@ a{
 #fqInput{
   position: absolute;
   height: 50px;
-  margin-left: 180px;
+  margin-left: 160px;
   margin-top: 500px;
   display: flex;
 }
@@ -218,14 +218,15 @@ a{
 }
 
 #fqInput div{
-  width: 90px;
-  height: 50px;
+  width: 80px;
+  height: 100px;
 }
 
 #fq400{
-  width: 60px !important;
+  width: 40px !important;
 }
 
 #fq550{
-  width: 110px !important;
+  width: 100px !important;
 }
+
