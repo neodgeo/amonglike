@@ -18,3 +18,5 @@ import './pages/teams';
 import './pages/teams.html';
 import './pages/labo';
 import './pages/labo.html';
+import './pages/news';
+import './pages/news.html';
