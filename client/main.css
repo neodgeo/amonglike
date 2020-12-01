@@ -240,3 +240,13 @@ video{
 .news{
   width: 100vw;
 }
+
+/* FRAISE EPREUVE 2 */
+
+#password{
+  position: absolute;
+  font-size: 6em;
+  margin-top: 40vh;
+  margin-left: 10vw;
+  width: 400px;
+}

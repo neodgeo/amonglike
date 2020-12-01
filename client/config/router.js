@@ -26,8 +26,14 @@ publicRoutes.route("/pecheEpreuve3", {
 });
 
 publicRoutes.route("/fraiseEpreuve1", {
+  action: function() {
+    BlazeLayout.render("blankLayout", { content: "fraiseEpreuve1" });
+  }
+});
+
+publicRoutes.route("/fraiseEpreuve2", {
     action: function() {
-      BlazeLayout.render("blankLayout", { content: "fraiseEpreuve1" });
+      BlazeLayout.render("blankLayout", { content: "fraiseEpreuve2" });
     }
 });
 

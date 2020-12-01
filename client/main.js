@@ -8,6 +8,8 @@ import './layouts/blank';
 import './layouts/blank.html';
 import './pages/fraise-epreuve1';
 import './pages/fraise-epreuve1.html';
+import './pages/fraise-epreuve2';
+import './pages/fraise-epreuve2.html';
 import './pages/peche-epreuve1';
 import './pages/peche-epreuve1.html';
 import './pages/peche-epreuve2';

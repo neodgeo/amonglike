@@ -26,15 +26,15 @@ Meteor.startup(() => {
   if (pecheColorData.find().fetch() == 0) {
     pecheColorData.insert({
       activeColor:'red',
-      darkpurple:'salle_1_jaune.gif',
-      purple:'salle_1_jaune.gif',
-      blue:'salle_1_jaune.gif',
-      turquoise:'salle_1_jaune.gif',
-      green:'salle_1_jaune.gif',
-      yellow:'salle_1_jaune.gif',
-      orange:'salle_1_jaune.gif',
-      red:'salle_1_rouge.gif',
-      darkred:'salle_1_jaune.gif'
+      darkpurple:'refraction1_400nm.gif',
+      purple:'refraction1_425nm.gif',
+      blue:'refraction1_470nm.gif',
+      turquoise:'refraction1_490nm.gif',
+      green:'refraction1_550nm.gif',
+      yellow:'refraction1_600nm.gif',
+      orange:'refraction1_630nm.gif',
+      red:'refraction1_665nm.gif',
+      darkred:'refraction1_700nm.gif'
     })
   }
 
