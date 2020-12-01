@@ -21,11 +21,19 @@
       <p class="msg2">C’n’est pas bon... On ne peux pas les désactiver, seulement les changer de couleurs.</p>
       <p class="msg3">Ah, la cape est réglée pour ne marcher qu’avec une lumière de fréquence 500 nm. Tu penses qu’on pourrait rendre tous les rayons jaunes ?</p>
       <button onclick="displayMsg()">></button>
+      <span id="b1">A basic message</span>
     </div>
 
-
-    <!-- Scripts -->
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
     <script>
+    document.getElementById('b1').onclick = function(){
+	    swal({
+        title: "",
+        imageUrl: "img/livret.png"
+      });
+    };
+
 
     var msg1 = document.querySelector('.msg1'),
     msg2 = document.querySelector('.msg2'),

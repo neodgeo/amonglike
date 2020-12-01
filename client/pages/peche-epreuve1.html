@@ -53,7 +53,10 @@
     if ( lock == "on"){
       console.log('hd lock')
     } else {
-      perso.src = "img/persohd.png";
+      perso.src = "img/persohd.gif";
+      setTimeout(function(){
+        perso.src = 'img/persohd.png'
+      }, 200);
       console.log('hd')
     }
   }
@@ -66,7 +69,10 @@
     if ( lock == "on"){
       console.log('bg lock')
     } else {
-      perso.src = "img/persobg.png";
+      perso.src = "img/persobg.gif";
+      setTimeout(function(){
+        perso.src = 'img/persobg.png'
+      }, 200);
       console.log('bg')
     }
   }
@@ -79,7 +85,10 @@
     if ( lock == "on"){
       console.log('bd lock')
     } else {
-      perso.src = "img/persobd.png";
+      perso.src = "img/persobd.gif";
+      setTimeout(function(){
+        perso.src = 'img/persobd.png'
+      }, 200);
       console.log('bd')
     }
   }
@@ -92,7 +101,10 @@
     if ( lock == "on"){
       console.log('hg lock')
     } else {
-      perso.src = "img/persohg.png";
+      perso.src = "img/persohg.gif";
+      setTimeout(function(){
+        perso.src = 'img/persohg.png'
+      }, 200);
       console.log('hg')
     }
   }
@@ -110,7 +122,10 @@
           if (scene.src == 'http://localhost:3000/img/refraction1_600nm.gif'){
             hautDroite()
           } else {
-            alert('Attention !!! les rayons ne sont pas réglés sur la bonne fréquence')
+            perso.src = 'img/persostop.gif';
+            setTimeout(function(){
+              perso.src = 'img/persohd.png'
+            }, 1000);
           }
         } else {
           hautDroite()
