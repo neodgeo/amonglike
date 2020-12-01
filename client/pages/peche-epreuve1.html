@@ -18,81 +18,82 @@
 
   var msg1 = document.querySelector('.msg1'),
   msg2 = document.querySelector('.msg2'),
-  msg3 = document.querySelector('.msg3')
-
-
-  var step = 0
+  msg3 = document.querySelector('.msg3'),
+  step = 0
 
   function displayMsg() {
-
-  if (step == 0) {
-    msg1.style.display = "block"
-    step += 1
-    console.log('msg1')
-  } else if (step == 1) {
-    msg2.style.display = "block"
-    step += 1
-    console.log('msg2')
-  } else if (step == 2) {
-    msg3.style.display = "block"
-    step += 1
-    console.log('msg3')
-  } else{
-    console.log("no more msg")
-  }
+    if (step == 0) {
+      msg1.style.display = "block"
+      step += 1
+      console.log('msg1')
+    } else if (step == 1) {
+      msg2.style.display = "block"
+      step += 1
+      console.log('msg2')
+    } else if (step == 2) {
+      msg3.style.display = "block"
+      step += 1
+      console.log('msg3')
+    } else{
+      console.log("no more msg")
+    }
   }
 
   var perso = document.querySelector('#persop1'),
-  scene = document.querySelector('#scenep1')
-
+  scene = document.querySelector('#scenep1'),
   marginLeft = 0,
-  marginTop = 0
+  marginTop = 0,
+  lock = 'off'
 
   function hautDroite() {
-    perso.src = "img/persomove.png";
     marginTop -= 15;
     perso.style.marginTop =  marginTop + 'px';
     marginLeft += 25;
     perso.style.marginLeft =  marginLeft + 'px';
-    var myVar = setInterval(myTimer, 1000);
-    function myTimer() {
-      perso.src = "img/perso.png";
+    if ( lock == "on"){
+      console.log('hd lock')
+    } else {
+      perso.src = "img/persohd.png";
+      console.log('hd')
     }
   }
 
   function basGauche() {
-    perso.src = "img/persomove.png";
     marginTop += 15;
     perso.style.marginTop =  marginTop + 'px';
     marginLeft -= 25;
     perso.style.marginLeft =  marginLeft + 'px';
-    var myVar = setInterval(myTimer, 1000);
-    function myTimer() {
-      perso.src = "img/perso.png";
+    if ( lock == "on"){
+      console.log('bg lock')
+    } else {
+      perso.src = "img/persobg.png";
+      console.log('bg')
     }
   }
 
   function basDroite() {
-    perso.src = "img/persomove.png";
     marginTop += 15;
     perso.style.marginTop =  marginTop + 'px';
     marginLeft += 25;
     perso.style.marginLeft =  marginLeft + 'px';
-    var myVar = setInterval(myTimer, 1000);
-    function myTimer() {
-      perso.src = "img/perso.png";
+    if ( lock == "on"){
+      console.log('bd lock')
+    } else {
+      perso.src = "img/persobd.png";
+      console.log('bd')
     }
   }
 
   function hautGauche() {
-    perso.src = "img/persomove.png";
     marginTop -= 15;
     perso.style.marginTop =  marginTop + 'px';
     marginLeft -= 25;
     perso.style.marginLeft =  marginLeft + 'px';
-    var myVar = setInterval(myTimer, 1000);
-    function myTimer() {
-      perso.src = "img/perso.png";
+    if ( lock == "on"){
+      console.log('hg lock')
+    } else {
+      perso.src = "img/persohg.png";
+      console.log('hg')
     }
   }
 
@@ -268,6 +269,14 @@
           window.location = 'http://localhost:3000/pecheEpreuve2'
         } else {
           basDroite()
+        }
+      } else if (e.keyCode == '86'){
+        if ( lock == 'off'){
+          lock = "on";
+          console.log('switch lock on')
+        } else {
+          lock = "off";
+          console.log('switch lock off')
         }
       }
   }

@@ -43,10 +43,62 @@
   }
 
   var perso = document.querySelector('#persop2');
-  var marginLeft = 0;
-  var marginTop = 0;
+  marginLeft = 0,
+  marginTop = 0,
+  lock = 'off'
 
 
+  function hautDroite() {
+    marginTop -= 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft += 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    if ( lock == "on"){
+      console.log('hd lock')
+    } else {
+      perso.src = "img/persohd.png";
+      console.log('hd')
+    }
+  }
+
+  function basGauche() {
+    marginTop += 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft -= 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    if ( lock == "on"){
+      console.log('bg lock')
+    } else {
+      perso.src = "img/persobg.png";
+      console.log('bg')
+    }
+  }
+
+  function basDroite() {
+    marginTop += 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft += 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    if ( lock == "on"){
+      console.log('bd lock')
+    } else {
+      perso.src = "img/persobd.png";
+      console.log('bd')
+    }
+  }
+
+  function hautGauche() {
+    marginTop -= 15;
+    perso.style.marginTop =  marginTop + 'px';
+    marginLeft -= 25;
+    perso.style.marginLeft =  marginLeft + 'px';
+    if ( lock == "on"){
+      console.log('hg lock')
+    } else {
+      perso.src = "img/persohg.png";
+      console.log('hg')
+    }
+  }
 
   document.onkeydown = checkKey;
   function checkKey(e) {
@@ -57,17 +109,7 @@
         } else if (marginTop == -190 && marginLeft == 275){
           console.log('Limite Haut Droite')
         } else {
-          perso.src = "img/persomove.png";
-          marginTop -= 15;
-          perso.style.marginTop =  marginTop + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          marginLeft += 25;
-          perso.style.marginLeft =  marginLeft + 'px';
-          //perso.style.transform = 'rotateY(180deg)';
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
+         hautDroite()
         }
       // BAS GAUCHE
       } else if (e.keyCode == '40') {
@@ -118,17 +160,7 @@
           }else if (marginTop == 405 && marginLeft == -25){
               window.location = 'pecheEpreuve3'
           } else {
-            perso.src = "img/persomove.png";
-            marginTop += 15;
-            perso.style.marginTop =  marginTop + 'px';
-            //perso.style.transform = 'rotateY(360deg)';
-            marginLeft -= 25;
-            perso.style.marginLeft =  marginLeft + 'px';
-            //perso.style.transform = 'rotateY(360deg)';
-            var myVar = setInterval(myTimer, 1000);
-            function myTimer() {
-              perso.src = "img/perso.png";
-            }
+           basGauche()
           }
       // HAUT GAUCHE
       } else if (e.keyCode == '37') {
@@ -167,17 +199,7 @@
         } else if (marginTop == -90 && marginLeft == 275){
           console.log('Limite Haut Gauche')
         } else {
-          perso.src = "img/persomove.png";
-          marginTop -= 15;
-          perso.style.marginTop =  marginTop + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          marginLeft -= 25;
-          perso.style.marginLeft =  marginLeft + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
+          hautGauche()
         }
       // BAS DROITE
       } else if (e.keyCode == '39') {
@@ -244,17 +266,7 @@
         }else if (marginTop == -120 && marginLeft == 600){
           window.location = 'http://localhost:3000/pecheEpreuve2'
         } else {
-          perso.src = "img/persomove.png";
-          marginTop += 15;
-          perso.style.marginTop =  marginTop + 'px';
-          //perso.style.transform = 'rotateY(360deg)';
-          marginLeft += 25;
-          perso.style.marginLeft =  marginLeft + 'px';
-          //perso.style.transform = 'rotateY(180deg)';
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
+          basDroite()
         }
       } else if (e.keyCode == '32') {
           perso.src = "img/persomove.png";
@@ -262,6 +274,14 @@
           function myTimer() {
             perso.src = "img/perso.png";
           }
+      } else if (e.keyCode == '86'){
+        if ( lock == 'off'){
+          lock = "on";
+          console.log('switch lock on')
+        } else {
+          lock = "off";
+          console.log('switch lock off')
+        }
       }
   }
   </script>

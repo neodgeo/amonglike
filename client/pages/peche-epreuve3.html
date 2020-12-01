@@ -254,12 +254,14 @@
             perso.src = "img/perso.png";
           }
         }
-      } else if (e.keyCode == '32') {
-          perso.src = "img/persomove.png";
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
+      } else if (e.keyCode == '86'){
+        if ( lock == 'off'){
+          lock = "on";
+          console.log('switch lock on')
+        } else {
+          lock = "off";
+          console.log('switch lock off')
+        }
       }
   }
   </script>
