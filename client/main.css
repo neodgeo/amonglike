@@ -77,6 +77,11 @@ button{
   margin-left: 50px;
 }
 
+#scenef2{
+  width: 850px;
+  margin-left: 50px;
+}
+
 .scene{
   position: absolute;
 }
@@ -245,8 +250,13 @@ video{
 
 #password{
   position: absolute;
-  font-size: 6em;
-  margin-top: 40vh;
-  margin-left: 10vw;
-  width: 400px;
+  font-size: 3em;
+  margin-top: 370px;
+  margin-left: 570px;
+  width: 190px;
+}
+
+::placeholder {
+  font-size: 0.6em;
+  text-align: center;
 }

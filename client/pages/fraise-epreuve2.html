@@ -1,5 +1,6 @@
 <template name="fraiseEpreuve2">
-  <input type="password" id="password" name="password">
+  <img id="scenef2" class="scene" src="img/mirage2-cam-on.gif" />
+  <input type="password" id="password" name="password" placeholder="Mot de passe">
   <div id="chat">
     <div class="pp">
       <img src="img/fraise.png" />
@@ -22,14 +23,15 @@
   <script>
 
   var step = 0,
-  input = document.querySelector('#password')
+  input = document.querySelector('#password'),
+  scene = document.querySelector('#scenef2')
 
 
   input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
       if (input.value == 'johnpendry'){
         event.preventDefault();
-        alert('Accès Autorisé')
+        scene.src = "img/mirage2-cam-off.gif"
       } else {
         alert('Accès Refusé')
       }
