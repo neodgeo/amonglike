@@ -260,3 +260,22 @@ video{
   font-size: 0.6em;
   text-align: center;
 }
+
+#camSwitch{
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 180px;
+  width: 350px;
+  font-size: 2em;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  color: #fff;
+  background: #111;
+}
+
+#camSwitch:hover{
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+}
