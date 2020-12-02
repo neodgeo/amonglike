@@ -270,13 +270,13 @@ video{
   padding: 10px;
   text-align: center;
   border-radius: 15px;
-  color: #fff;
-  background: #111;
+  color: #111;
+  background: #fff;
 }
 
 #camSwitch:hover{
-  background: #fff;
-  color: #111;
+  background: #ffc022;
+  color: #fff;
   cursor: pointer;
 }
 
