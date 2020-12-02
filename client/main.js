@@ -16,6 +16,8 @@ import './pages/peche-epreuve2';
 import './pages/peche-epreuve2.html';
 import './pages/peche-epreuve3';
 import './pages/peche-epreuve3.html';
+import './pages/peche-epreuve3b';
+import './pages/peche-epreuve3b.html';
 import './pages/teams';
 import './pages/teams.html';
 import './pages/labo';

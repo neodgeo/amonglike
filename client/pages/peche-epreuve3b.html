@@ -1,0 +1,140 @@
+<template name="pecheEpreuve3b">
+  <img id="scenep3b" class="scene" src="img/puzzle0.gif"/>
+  <div id="chat">
+    <div class="pp">
+      <img src="img/peche.png" />
+      <h4>Peche Refraction</h4>
+    </div>
+    <p class="msg1">Qu’est-ce-que c’est que cette salle ?</p>
+    <p class="msg2">Toucher ces rayons ne semblent pas une bonne idée. Dans le livret, il est dit que cette cape est réglée pour être invisible dans une lumière de fréquence 500 nm.</p>
+    <p class="msg3">C’est ça ! Ne passe que par les rayons de couleurs jaune ! </p>
+    <button onclick="displayMsg()">></button>
+  </div>
+  <!-- <img id="livretIcon" src="img/livretoff.png" onclick="livretModal()">
+  <img id="livret" src="img/schema3.png"> -->
+  <img id="scratch" src="img/scratch.gif">
+  <div id="puzzleElements">
+    <div id="puzzleEl1"></div>
+    <div id="puzzleEl2"></div>
+    <div id="puzzleEl3"></div>
+    <div id="puzzleEl4"></div>
+    <div id="puzzleEl5"></div>
+    <div id="puzzleEl6"></div>
+    <div id="puzzleEl7"></div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script>
+  var scene = document.querySelector('#scenep3b'),
+  puzzleEl1 = document.querySelector('#puzzleEl1'),
+  puzzleEl2 = document.querySelector('#puzzleEl2'),
+  puzzleEl3 = document.querySelector('#puzzleEl3'),
+  puzzleEl4 = document.querySelector('#puzzleEl4'),
+  puzzleEl5 = document.querySelector('#puzzleEl5'),
+  puzzleEl6 = document.querySelector('#puzzleEl6'),
+  puzzleEl7 = document.querySelector('#puzzleEl7')
+
+  puzzleEl1.onclick = function(){
+    if (scene.src == "http://localhost:3000/img/puzzle.gif"){
+      alert('nope')
+    } else if (scene.src == "http://localhost:3000/img/puzzle1ok.gif"){
+      scene.src = 'img/puzzle1nok.gif'
+    } else if (scene.src == "http://localhost:3000/img/puzzle2nok.gif"){
+      scene.src = 'img/puzzle3ok.gif'
+    } else if (scene.src == "http://localhost:3000/img/puzzle2ok.gif"){
+      scene.src = 'img/puzzle3ok.gif'
+    }
+  }
+
+  puzzleEl2.onclick = function(){
+    if (scene.src == "http://localhost:3000/img/puzzle.gif"){
+      alert('nope')
+    } else if (scene.src == "http://localhost:3000/img/puzzle1ok.gif"){
+      scene.src = 'img/puzzle1nok.gif'
+    } else if (scene.src == "http://localhost:3000/img/puzzle2ok.gif"){
+      scene.src = 'img/puzzle2nok.gif'
+    }
+  }
+
+  puzzleEl3.onclick = function(){
+    if (scene.src == "http://localhost:3000/img/puzzle.gif"){
+      alert('nope')
+    } else if (scene.src == "http://localhost:3000/img/puzzle1ok.gif"){
+      scene.src = 'img/puzzle2ok.gif'
+    } else if (scene.src == "http://localhost:3000/img/puzzle1nok.gif"){
+      scene.src = 'img/puzzle2ok.gif'
+    }
+  }
+
+  puzzleEl4.onclick = function(){
+    if (scene.src == "http://localhost:3000/img/puzzle.gif"){
+      alert('nope')
+    } else if (scene.src == "http://localhost:3000/img/puzzle1ok.gif"){
+      scene.src = 'img/puzzle1nok.gif'
+    } else if (scene.src == "http://localhost:3000/img/puzzle2ok.gif"){
+      scene.src = 'img/puzzle2nok.gif'
+    }
+  }
+
+  puzzleEl5.onclick = function(){
+    if (scene.src == "http://localhost:3000/img/puzzle0.gif"){
+      scene.src = 'img/puzzle1ok.gif'
+    }
+  }
+
+  puzzleEl7.onclick = function(){
+    if (scene.src == "http://localhost:3000/img/puzzle.gif"){
+      alert('nope')
+    } else if (scene.src == "http://localhost:3000/img/puzzle1ok.gif"){
+      scene.src = 'img/puzzle1nok.gif'
+    } else if (scene.src == "http://localhost:3000/img/puzzle2ok.gif"){
+      scene.src = 'img/puzzle2nok.gif'
+    }
+  }
+
+  var scratch = document.querySelector('#scratch'),
+  cape = 'on'
+
+  var livretIcon = document.querySelector('#livretIcon'),
+  livret = document.querySelector('#livret'),
+  modal = "off"
+
+  function livretModal(){
+    if (modal == "off"){
+      livretIcon.src = "img/livreton.png"
+      modal = "on"
+      livret.style.right = "0"
+    } else {
+      livretIcon.src = "img/livretoff.png"
+      modal = "off"
+      livret.style.right = "-700px"
+    }
+  }
+
+  var msg1 = document.querySelector('.msg1'),
+  msg2 = document.querySelector('.msg2'),
+  msg3 = document.querySelector('.msg3')
+
+
+  var step = 0
+
+  function displayMsg() {
+    if (step == 0) {
+      msg1.style.display = "block"
+      step += 1
+      console.log('msg1')
+    } else if (step == 1) {
+      msg2.style.display = "block"
+      step += 1
+      console.log('msg2')
+    } else if (step == 2) {
+      msg3.style.display = "block"
+      step += 1
+      console.log('msg3')
+    } else{
+      console.log("no more msg")
+    }
+  }
+  </script>
+</template>
