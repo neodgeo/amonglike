@@ -69,7 +69,7 @@ button{
 
 #scenep3{
   width: 1000px;
-  margin-top: -30px;
+  margin-top: -40px;
 }
 
 #scenef1{
@@ -297,4 +297,13 @@ video{
   right: -700px;
   top: -50px;
   transition: 500ms;
+}
+
+/* SCRATCH */
+
+#scratch{
+  width: 400px;
+  margin-left: 300px;
+  position: absolute;
+  display: none;
 }
