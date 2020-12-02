@@ -13,15 +13,25 @@
     <button onclick="displayMsg()">></button>
   </div>
 
+  <img id="livretIcon" src="img/livretoff.png" onclick="livretModal()">
+  <img id="livret" src="img/schema2.png">
 
-
-  <!-- Scripts -->
-  <script src="sweetalert2.all.min.js"></script>
-  <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
-  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-  <script src="sweetalert2.min.js"></script>
-<link rel="stylesheet" href="sweetalert2.min.css">
   <script>
+  var livretIcon = document.querySelector('#livretIcon'),
+  livret = document.querySelector('#livret'),
+  modal = "off"
+
+  function livretModal(){
+    if (modal == "off"){
+      livretIcon.src = "img/livreton.png"
+      modal = "on"
+      livret.style.right = "0"
+    } else {
+      livretIcon.src = "img/livretoff.png"
+      modal = "off"
+      livret.style.right = "-700px"
+    }
+  }
 
   var step = 0,
   input = document.querySelector('#password'),

@@ -11,42 +11,56 @@
     <p class="msg3">C’est ça ! Ne passe que par les rayons de couleurs jaune ! </p>
     <button onclick="displayMsg()">></button>
   </div>
+  <img id="livretIcon" src="img/livretoff.png" onclick="livretModal()">
+  <img id="livret" src="img/schema2.png">
 
 
   <!-- Scripts -->
   <script>
+  var livretIcon = document.querySelector('#livretIcon'),
+  livret = document.querySelector('#livret'),
+  modal = "off"
+
+  function livretModal(){
+    if (modal == "off"){
+      livretIcon.src = "img/livreton.png"
+      modal = "on"
+      livret.style.right = "0"
+    } else {
+      livretIcon.src = "img/livretoff.png"
+      modal = "off"
+      livret.style.right = "-700px"
+    }
+  }
 
   var msg1 = document.querySelector('.msg1'),
   msg2 = document.querySelector('.msg2'),
-  msg3 = document.querySelector('.msg3')
-
-
-  var step = 0
+  msg3 = document.querySelector('.msg3'),
+  step = 0
 
   function displayMsg() {
-
-  if (step == 0) {
-    msg1.style.display = "block"
-    step += 1
-    console.log('msg1')
-  } else if (step == 1) {
-    msg2.style.display = "block"
-    step += 1
-    console.log('msg2')
-  } else if (step == 2) {
-    msg3.style.display = "block"
-    step += 1
-    console.log('msg3')
-  } else{
-    console.log("no more msg")
+    if (step == 0) {
+      msg1.style.display = "block"
+      step += 1
+      console.log('msg1')
+    } else if (step == 1) {
+      msg2.style.display = "block"
+      step += 1
+      console.log('msg2')
+    } else if (step == 2) {
+      msg3.style.display = "block"
+      step += 1
+      console.log('msg3')
+    } else{
+      console.log("no more msg")
+    }
   }
-  }
 
-  var perso = document.querySelector('#persop2');
+  var perso = document.querySelector('#persop2'),
+  scene = document.querySelector('#scenep2'),
   marginLeft = 0,
   marginTop = 0,
   lock = 'off'
-
 
   function hautDroite() {
     marginTop -= 15;
@@ -56,9 +70,19 @@
     if ( lock == "on"){
       console.log('hd lock')
     } else {
-      perso.src = "img/persohd.png";
+      perso.src = "img/persohd.gif";
+      setTimeout(function(){
+        perso.src = 'img/persohd.png'
+      }, 200);
       console.log('hd')
     }
+  }
+
+  function stopHautDroite(){
+    perso.src = 'img/persostop.gif';
+    setTimeout(function(){
+      perso.src = 'img/persohd.png'
+    }, 1000);
   }
 
   function basGauche() {
@@ -69,9 +93,19 @@
     if ( lock == "on"){
       console.log('bg lock')
     } else {
-      perso.src = "img/persobg.png";
+      perso.src = "img/persobg.gif";
+      setTimeout(function(){
+        perso.src = 'img/persobg.png'
+      }, 200);
       console.log('bg')
     }
+  }
+
+  function stopBasGauche(){
+    perso.src = 'img/persostop.gif';
+    setTimeout(function(){
+      perso.src = 'img/persobg.png'
+    }, 1000);
   }
 
   function basDroite() {
@@ -82,9 +116,19 @@
     if ( lock == "on"){
       console.log('bd lock')
     } else {
-      perso.src = "img/persobd.png";
+      perso.src = "img/persobd.gif";
+      setTimeout(function(){
+        perso.src = 'img/persobd.png'
+      }, 200);
       console.log('bd')
     }
+  }
+
+  function stopBasDroite(){
+    perso.src = 'img/persostop.gif';
+    setTimeout(function(){
+      perso.src = 'img/persobd.png'
+    }, 1000);
   }
 
   function hautGauche() {
@@ -95,194 +139,525 @@
     if ( lock == "on"){
       console.log('hg lock')
     } else {
-      perso.src = "img/persohg.png";
+      perso.src = "img/persohg.gif";
+      setTimeout(function(){
+        perso.src = 'img/persohg.png'
+      }, 200);
       console.log('hg')
     }
   }
 
+  function stopHautGauche(){
+    perso.src = 'img/persostop.gif';
+    setTimeout(function(){
+      perso.src = 'img/persohg.png'
+    }, 1000);
+  }
+
   document.onkeydown = checkKey;
   function checkKey(e) {
-      // HAUT DROITE
-      if (e.keyCode == '38') {
-        if (marginTop == -105 && marginLeft == 300){
-          console.log('Limite Haut Droite')
-        } else if (marginTop == -190 && marginLeft == 275){
-          console.log('Limite Haut Droite')
-        } else {
-         hautDroite()
-        }
-      // BAS GAUCHE
-      } else if (e.keyCode == '40') {
-          if (marginTop == 0 && marginLeft == 0){
-            console.log('Limite Bas Gauche')
-          } else if (marginTop == -10 && marginLeft == -25){
-            console.log('Limite Bas Gauche')
-          } else if (marginTop == 10 && marginLeft == 25){
-            console.log('Limite Bas Gauche')
-          } else if (marginTop == 40 && marginLeft == -25){
-            console.log('Limite Bas Gauche')
-          } else if (marginTop == 50 && marginLeft == 0){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 60 && marginLeft == 25){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 70 && marginLeft == 50){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 80 && marginLeft == 75){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 90 && marginLeft == 100){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 100 && marginLeft == 125){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 110 && marginLeft == 150){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 120 && marginLeft == 175){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 130 && marginLeft == 200){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 140 && marginLeft == 225){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 150 && marginLeft == 250){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 160 && marginLeft == 275){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 170 && marginLeft == 300){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == 180 && marginLeft == 325){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == -5 && marginLeft == 175){
-            console.log('Limite Bas Gauche')
-          }else if (marginTop == -40 && marginLeft == 275){
-              console.log('Limite Bas Droite')
-          }else if (marginTop == -30 && marginLeft == 300){
-              console.log('Limite Bas Droite')
-          }else if (marginTop == 390 && marginLeft == -50){
-              window.location = 'pecheEpreuve3'
-          }else if (marginTop == 405 && marginLeft == -25){
-              window.location = 'pecheEpreuve3'
-          } else {
-           basGauche()
-          }
-      // HAUT GAUCHE
-      } else if (e.keyCode == '37') {
-        if (marginTop == 40 && marginLeft == -25){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == 25 && marginLeft == 0){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -10 && marginLeft == -25){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -25 && marginLeft == 0){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -40 && marginLeft == 25){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -55 && marginLeft == 50){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -70 && marginLeft == 75){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -85 && marginLeft == 100){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -100 && marginLeft == 125){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -115 && marginLeft == 150){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -130 && marginLeft == 175){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -145 && marginLeft == 200){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -160 && marginLeft == 225){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -175 && marginLeft == 250){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -190 && marginLeft == 275){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -105 && marginLeft == 300){
-          console.log('Limite Haut Gauche')
-        } else if (marginTop == -90 && marginLeft == 275){
-          console.log('Limite Haut Gauche')
-        } else {
-          hautGauche()
-        }
-      // BAS DROITE
-      } else if (e.keyCode == '39') {
-        if (marginTop == 30 && marginLeft == 575){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 10 && marginLeft == 25){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -5 && marginLeft == 50){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -5 && marginLeft == 175){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 200){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -35 && marginLeft == 225){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 325){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 200){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 225){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 250){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 275){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 300){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 325){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -35 && marginLeft == 350){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -50 && marginLeft == 375){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -65 && marginLeft == 400){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -80 && marginLeft == 425){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -95 && marginLeft == 450){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -110 && marginLeft == 475){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == -20 && marginLeft == 75){
-            console.log('Limite Bas Droite')
-        }else if (marginTop == 45 && marginLeft == 550){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 60 && marginLeft == 525){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 75 && marginLeft == 500){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 90 && marginLeft == 475){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 105 && marginLeft == 450){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 120 && marginLeft == 425){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 135 && marginLeft == 400){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 150 && marginLeft == 375){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 165 && marginLeft == 350){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == 180 && marginLeft == 325){
-          console.log('Limite Bas Droite')
-        }else if (marginTop == -120 && marginLeft == 600){
-          window.location = 'http://localhost:3000/pecheEpreuve2'
-        } else {
-          basDroite()
-        }
-      } else if (e.keyCode == '32') {
-          perso.src = "img/persomove.png";
-          var myVar = setInterval(myTimer, 1000);
-          function myTimer() {
-            perso.src = "img/perso.png";
-          }
-      } else if (e.keyCode == '86'){
-        if ( lock == 'off'){
-          lock = "on";
-          console.log('switch lock on')
-        } else {
-          lock = "off";
-          console.log('switch lock off')
-        }
+    // HAUT DROITE
+    if (e.keyCode == '38') {
+      if (marginTop == 0 && marginLeft == 50){
+        perso.src = "img/persohd.png"
+      } else if (marginTop == 15 && marginLeft == 75){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 30 && marginLeft == 100){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 45 && marginLeft == 125){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 60 && marginLeft == 150){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 75 && marginLeft == 175){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 90 && marginLeft == 200){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 105 && marginLeft == 225){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 120 && marginLeft == 250){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 135 && marginLeft == 275){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 150 && marginLeft == 300){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 165 && marginLeft == 325){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 180 && marginLeft == 350){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 195 && marginLeft == 375){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == 210 && marginLeft == 400){
+        perso.src = 'img/persohd.png'
+      } else if (marginTop == -190 && marginLeft == 275){
+        perso.src = "img/persohd.png"
+      } else {
+        hautDroite()
       }
+    // BAS GAUCHE
+    } else if (e.keyCode == '40') {
+      if (marginTop == 0 && marginLeft == 0){
+        perso.src = "img/persobg.png"
+      } else if (marginTop == 420 && marginLeft == 50){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 405 && marginLeft == 25){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 405 && marginLeft == -25){
+        window.location = 'pecheEpreuve3'
+      } else if (marginTop == 375 && marginLeft == -25){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 360 && marginLeft == -50){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 345 && marginLeft == -75){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 330 && marginLeft == -100){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 90 && marginLeft == -100){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 105 && marginLeft == -75){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 120 && marginLeft == -50){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 135 && marginLeft == -25){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 150 && marginLeft == 0){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 165 && marginLeft == 25){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 180 && marginLeft == 50){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 195 && marginLeft == 75){
+        perso.src = 'img/persobg.png'
+      } else if (marginTop == 75 && marginLeft == -75){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasGauche()
+              lock = 'off'
+            } else {
+              basGauche()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 90 && marginLeft == -50){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasGauche()
+              lock = 'off'
+            } else {
+              basGauche()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 105 && marginLeft == -25){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasGauche()
+              lock = 'off'
+            } else {
+              basGauche()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 105 && marginLeft == 25){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 120 && marginLeft == 50){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 135 && marginLeft == 75){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 150 && marginLeft == 100){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 165 && marginLeft == 125){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 180 && marginLeft == 150){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 195 && marginLeft == 125){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 210 && marginLeft == 200){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 225 && marginLeft == 225){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 240 && marginLeft == 250){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 255 && marginLeft == 275){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else if (marginTop == 270 && marginLeft == 300){
+        if (perso.src == 'http://localhost:3000/img/persohg.png'){
+          if (lock == 'off'){
+            stopBasGauche()
+          } else {
+            basGauche()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohg.png'){
+          stopBasGauche()
+        }
+      } else {
+        basGauche()
+      }
+    // HAUT GAUCHE
+    } else if (e.keyCode == '37') {
+      if (marginTop == 0 && marginLeft == 50){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 30 && marginLeft == 0){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 45 && marginLeft == -25){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 60 && marginLeft == -50){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 75 && marginLeft == -75){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 90 && marginLeft == -100){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 225 && marginLeft == 75){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 240 && marginLeft == 50){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 255 && marginLeft == 25){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 270 && marginLeft == 0){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 285 && marginLeft == -25){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 300 && marginLeft == -50){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 315 && marginLeft == -75){
+        perso.src = 'img/persohg.png'
+      } else if (marginTop == 330 && marginLeft == -100){
+        perso.src = 'img/persohg.png'
+      } else {
+        hautGauche()
+      }
+    // BAS DROITE
+    } else if (e.keyCode == '39') {
+      if (marginTop == 90 && marginLeft == 50){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasDroite()
+              lock = 'off'
+            } else {
+              basDroite()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 75 && marginLeft == 75){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasDroite()
+              lock = 'off'
+            } else {
+              basDroite()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 60 && marginLeft == 100){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasDroite()
+              lock = 'off'
+            } else {
+              basDroite()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 45 && marginLeft == 125){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasDroite()
+              lock = 'off'
+            } else {
+              basDroite()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 30 && marginLeft == 100){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasDroite()
+              lock = 'off'
+            } else {
+              basDroite()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 105 && marginLeft == 25){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 120 && marginLeft == 0){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 105 && marginLeft == -25){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else if (lock == 'on') {
+            if (scene.src == 'http://localhost:3000/img/refraction2-cam-on.gif'){
+              stopBasDroite()
+              lock = 'off'
+            } else {
+              basDroite()
+            }
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 180 && marginLeft == 150){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 195 && marginLeft == 175){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 180 && marginLeft == 150){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 165 && marginLeft == 175){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 150 && marginLeft == 200){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 135 && marginLeft == 225){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 120 && marginLeft == 250){
+        if (perso.src == 'http://localhost:3000/img/persohd.png'){
+          if (lock == 'off'){
+            stopBasDroite()
+          } else {
+            basDroite()
+          }
+        } else if (perso.src !== 'http://localhost:3000/img/persohd.png'){
+          stopBasDroite()
+        }
+      } else if (marginTop == 210 && marginLeft == 400){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 225 && marginLeft == 375){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 240 && marginLeft == 350){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 255 && marginLeft == 325){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 270 && marginLeft == 300){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 285 && marginLeft == 275){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 300 && marginLeft == 250){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 315 && marginLeft == 225){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 330 && marginLeft == 200){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 345 && marginLeft == 175){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 360 && marginLeft == 150){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 375 && marginLeft == 125){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 390 && marginLeft == 100){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 405 && marginLeft == 75){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == 420 && marginLeft == 50){
+        perso.src = 'img/persobd.png'
+      } else if (marginTop == -30 && marginLeft == 150) {
+        if (scene.src == 'http://localhost:3000/img/refraction1_600nm.gif'){
+          basDroite()
+        } else {
+          stopBasDroite()
+        }
+      } else {
+        basDroite()
+      }
+    } else if (e.keyCode == '86'){
+      if ( lock == 'off'){
+        lock = "on";
+        console.log('switch lock on')
+      } else {
+        lock = "off";
+        console.log('switch lock off')
+      }
+    }
   }
   </script>
 </template>

@@ -11,10 +11,27 @@
     <p class="msg3">C’est ça ! Ne passe que par les rayons de couleurs jaune ! </p>
     <button onclick="displayMsg()">></button>
   </div>
+  <img id="livretIcon" src="img/livretoff.png" onclick="livretModal()">
+  <img id="livret" src="img/schema3.png">
 
 
   <!-- Scripts -->
   <script>
+  var livretIcon = document.querySelector('#livretIcon'),
+  livret = document.querySelector('#livret'),
+  modal = "off"
+
+  function livretModal(){
+    if (modal == "off"){
+      livretIcon.src = "img/livreton.png"
+      modal = "on"
+      livret.style.right = "0"
+    } else {
+      livretIcon.src = "img/livretoff.png"
+      modal = "off"
+      livret.style.right = "-700px"
+    }
+  }
 
   var msg1 = document.querySelector('.msg1'),
   msg2 = document.querySelector('.msg2'),
