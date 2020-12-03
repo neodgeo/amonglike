@@ -371,6 +371,20 @@ video{
   cursor:pointer;
 }
 
+#infop3b{
+  width: 450px;
+  position: absolute;
+  margin-left: 400px;
+  margin-top: 25px;
+}
+
+#infop3bicon{
+  width: 30px;
+  position: absolute;
+  margin-left: 375px;
+  margin-top: 550px;
+}
+
 #persop3c{
   position: absolute;
   padding-top: 420px;
@@ -427,4 +441,26 @@ h3.intro{
   right: 27vw;
   width: 200px;
   bottom: 0;
+}
+
+#next{
+  background: #fff;
+  font-size: 1em;
+  padding: 20px 50px;
+  position: absolute;
+  border-radius: 10px;
+  width: 300px;
+  margin-top: 20vh;
+  margin-left: calc(50vw - 200px);
+  display: none;
+}
+
+#next h3{
+  color: #1c1548;
+  width: 100%;
+}
+
+#next a{
+  color: #725bfb;
+  text-decoration: underline;
 }

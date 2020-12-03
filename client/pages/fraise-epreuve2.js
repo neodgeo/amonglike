@@ -38,6 +38,7 @@ Template.fraiseEpreuve2.events({
         var instance = Template.instance();
         pecheColorData2.update({_id:instance.peche2Id.get()},{$set:{activeColor:'camOff'}})
         fraiseColorData2.update({_id:instance.fraise2Id.get()},{$set:{activeColor:'camOff'}})
+        next.style.display = 'block'
       } else {
         alert('Mot de passe incorrect !')
       }

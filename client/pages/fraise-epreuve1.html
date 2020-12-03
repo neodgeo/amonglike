@@ -22,6 +22,10 @@
     </div>
     <img id="livretIcon" src="/img/livretoff.png" onclick="livretModal()">
     <img id="livret" src="/img/schema1.png">
+    <div id="next">
+      <h3>C'est le bon réglage !</h3>
+      <span>Tu as réussi la première épreuve, tu peux maintenant passer à l'<a href="fraiseEpreuve2">épreuve suivante</a> si ton coéquipier a reussi à passer dans la deuxième salle.</span>
+    </div>
 
     <script>
     var livretIcon = document.querySelector('#livretIcon'),
@@ -39,7 +43,6 @@
         livret.style.right = "-700px"
       }
     }
-
 
     var msg1 = document.querySelector('.msg1'),
     msg2 = document.querySelector('.msg2'),
@@ -67,8 +70,11 @@
 
     var perso = document.querySelector('#perso');
     var scene = document.querySelector('#scenef1');
-    var marginLeft = 0;
-    var marginTop = 0;
+    var next = document.querySelector('#next');
+
+    fq600.onclick = function() {
+      next.style.display = 'block'
+    }
 
     </script>
 </template>
