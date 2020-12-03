@@ -287,13 +287,13 @@ video{
   width: 100px;
   height: 100px;
   position: absolute;
-  left: 15px;
+  right: 15px;
   bottom: 10px;
   cursor: pointer;
 }
 
 #livret{
-  width: 700px;
+  width: 570px;
   position: absolute;
   right: -700px;
   top: -50px;
@@ -420,4 +420,11 @@ h3.intro{
 
 .msg2 a {
   text-decoration: underline;
+}
+
+#controle{
+  position: absolute;
+  right: 27vw;
+  width: 200px;
+  bottom: 0;
 }
