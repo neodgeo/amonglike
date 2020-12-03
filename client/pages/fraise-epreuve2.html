@@ -1,10 +1,10 @@
 <template name="fraiseEpreuve2">
-  <img id="scenef2" class="scene" src="img/{{imageScene}}" />
+  <img id="scenef2" class="scene" src="https://dcn.eestienne.info/kiz/workshop/img/{{imageScene}}" />
   <input type="password" id="password" name="password" placeholder="Mot de passe">
   <div id="camSwitch" >Désactiver les caméras</div>
   <div id="chat">
     <div class="pp">
-      <img src="img/fraise.png" />
+      <img src="https://dcn.eestienne.info/kiz/workshop/img/fraise.png" />
       <h4>Fraise Mirage</h4>
     </div>
     <p class="msg1">Il semble que cette salle soit infestée de rayon de détections. </p>
@@ -12,21 +12,22 @@
     <p class="msg3">Ah, la cape est réglée pour ne marcher qu’avec une lumière de fréquence 500 nm. Tu penses qu’on pourrait rendre tous les rayons jaunes ?</p>
   </div>
 
-  <img id="livretIcon" src="img/livretoff.png" onclick="livretModal()">
-  <img id="livret" src="img/schema2.png">
+  <img id="livretIcon" src="https://dcn.eestienne.info/kiz/workshop/img/livretoff.png" onclick="livretModal()">
+  <img id="livret" src="https://dcn.eestienne.info/kiz/workshop/img/schema2.png">
 
   <script>
   var livretIcon = document.querySelector('#livretIcon'),
   livret = document.querySelector('#livret'),
+  input = document.querySelector('#password'),
   modal = "off"
 
   function livretModal(){
     if (modal == "off"){
-      livretIcon.src = "img/livreton.png"
+      livretIcon.src = "https://dcn.eestienne.info/kiz/workshop/img/livreton.png"
       modal = "on"
       livret.style.right = "0"
     } else {
-      livretIcon.src = "img/livretoff.png"
+      livretIcon.src = "https://dcn.eestienne.info/kiz/workshop/img/livretoff.png"
       modal = "off"
       livret.style.right = "-700px"
     }

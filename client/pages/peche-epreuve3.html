@@ -1,18 +1,18 @@
 <template name="pecheEpreuve3">
-  <img id="scenep3" class="scene" src="img/salle3.jpg"/>
-  <img id="persop3" src="img/perso.png">
+  <img id="scenep3" class="scene" src="https://dcn.eestienne.info/kiz/workshop/img/salle3.jpg"/>
+  <img id="persop3" src="https://dcn.eestienne.info/kiz/workshop/img/perso.png">
   <div id="chat">
     <div class="pp">
-      <img src="img/peche.png" />
+      <img src="https://dcn.eestienne.info/kiz/workshop/img/peche.png" />
       <h4>Peche Refraction</h4>
     </div>
     <p class="msg1">Qu’est-ce-que c’est que cette salle ?</p>
     <p class="msg2">Toucher ces rayons ne semblent pas une bonne idée. Dans le livret, il est dit que cette cape est réglée pour être invisible dans une lumière de fréquence 500 nm.</p>
     <p class="msg3">C’est ça ! Ne passe que par les rayons de couleurs jaune ! </p>
   </div>
-  <img id="livretIcon" src="img/livretoff.png" onclick="livretModal()">
-  <img id="livret" src="img/schema3.png">
-  <img id="scratch" src="img/scratch.gif">
+  <img id="livretIcon" src="https://dcn.eestienne.info/kiz/workshop/img/livretoff.png" onclick="livretModal()">
+  <img id="livret" src="https://dcn.eestienne.info/kiz/workshop/img/schema3.png">
+  <img id="scratch" src="https://dcn.eestienne.info/kiz/workshop/img/scratch.gif">
 
 
   <!-- Scripts -->
@@ -26,11 +26,11 @@
 
   function livretModal(){
     if (modal == "off"){
-      livretIcon.src = "img/livreton.png"
+      livretIcon.src = "https://dcn.eestienne.info/kiz/workshop/img/livreton.png"
       modal = "on"
       livret.style.right = "0"
     } else {
-      livretIcon.src = "img/livretoff.png"
+      livretIcon.src = "https://dcn.eestienne.info/kiz/workshop/img/livretoff.png"
       modal = "off"
       livret.style.right = "-700px"
     }
@@ -65,21 +65,21 @@
       if ( lock == "on"){
         console.log('hg lock')
       } else {
-        perso.src = "img/persohd.gif";
+        perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.gif";
         setTimeout(function(){
-          perso.src = 'img/persohd.png'
+          perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persohd.png'
         }, 200);
         console.log('hg')
       }
     } else if (cape == 'off'){
-      perso.src = "img/persoshd.gif";
+      perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif";
     }
   }
 
   function stopHautDroite(){
-    perso.src = 'img/persostop.gif';
+    perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persostop.gif';
     setTimeout(function(){
-      perso.src = 'img/persohd.png'
+      perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persohd.png'
     }, 1000);
   }
 
@@ -92,21 +92,21 @@
       if ( lock == "on"){
         console.log('hg lock')
       } else {
-        perso.src = "img/persobg.gif";
+        perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.gif";
         setTimeout(function(){
-          perso.src = 'img/persobg.png'
+          perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persobg.png'
         }, 200);
         console.log('hg')
       }
     } else if (cape == 'off'){
-      perso.src = "img/persosbg.gif";
+      perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif";
     }
   }
 
   function stopBasGauche(){
-    perso.src = 'img/persostop.gif';
+    perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persostop.gif';
     setTimeout(function(){
-      perso.src = 'img/persobg.png'
+      perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persobg.png'
     }, 1000);
   }
 
@@ -119,21 +119,21 @@
       if ( lock == "on"){
         console.log('hg lock')
       } else {
-        perso.src = "img/persobd.gif";
+        perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.gif";
         setTimeout(function(){
-          perso.src = 'img/persobd.png'
+          perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persobd.png'
         }, 200);
         console.log('hg')
       }
     } else if (cape == 'off'){
-      perso.src = "img/persosbd.gif";
+      perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif";
     }
   }
 
   function stopBasDroite(){
-    perso.src = 'img/persostop.gif';
+    perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persostop.gif';
     setTimeout(function(){
-      perso.src = 'img/persobd.png'
+      perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persobd.png'
     }, 1000);
   }
 
@@ -146,21 +146,21 @@
       if ( lock == "on"){
         console.log('hg lock')
       } else {
-        perso.src = "img/persohg.gif";
+        perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.gif";
         setTimeout(function(){
-          perso.src = 'img/persohg.png'
+          perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persohg.png'
         }, 200);
         console.log('hg')
       }
     } else if (cape == 'off'){
-      perso.src = "img/persoshg.gif";
+      perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif";
     }
   }
 
   function stopHautGauche(){
-    perso.src = 'img/persostop.gif';
+    perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persostop.gif';
     setTimeout(function(){
-      perso.src = 'img/persohg.png'
+      perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persohg.png'
     }, 1000);
   }
 
@@ -170,87 +170,87 @@
     if (e.keyCode == '38') {
       if (marginTop == 15 && marginLeft == 75){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == 0 && marginLeft == 50){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -30 && marginLeft == 0){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -15 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -30 && marginLeft == -100){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -45 && marginLeft == -125){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -60 && marginLeft == -150){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -90 && marginLeft == -150){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -210 && marginLeft == 50){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -225 && marginLeft == 25){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -240 && marginLeft == 0){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
           window.location = 'pecheEpreuve3b'
         }
       } else if (marginTop == -255 && marginLeft == -25){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -270 && marginLeft == -50){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else if (marginTop == -285 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persohd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshd.gif"
         }
       } else {
         hautDroite()
@@ -259,93 +259,93 @@
     } else if (e.keyCode == '40') {
       if (marginTop == 30 && marginLeft == 50){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == 15 && marginLeft == 25){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == 45 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == 30 && marginLeft == -100){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -15 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -30 && marginLeft == -100){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -45 && marginLeft == -125){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -60 && marginLeft == -150){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -75 && marginLeft == -175){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -90 && marginLeft == -200){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -30 && marginLeft == -350){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -45 && marginLeft == -375){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -75 && marginLeft == -425){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == 90 && marginLeft == -450){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else if (marginTop == -60 && marginLeft == -400){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbg.gif"
         }
       } else {
         basGauche()
@@ -354,117 +354,117 @@
     } else if (e.keyCode == '37') {
       if (marginTop == -30 && marginLeft == 0){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -15 && marginLeft == -25){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == 15 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == 30 && marginLeft == -100){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -255 && marginLeft == -25){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -240 && marginLeft == -50){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -225 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -210 && marginLeft == -100){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -195 && marginLeft == -125){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -180 && marginLeft == -150){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -195 && marginLeft == -225){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -180 && marginLeft == -250){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -165 && marginLeft == -275){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -150 && marginLeft == -300){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -135 && marginLeft == -325){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -120 && marginLeft == -350){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -105 && marginLeft == -375){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -90 && marginLeft == -400){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -75 && marginLeft == -425){
         if (cape == 'on'){
-          perso.src = "img/persohg.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persohg.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persoshg.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif"
         }
       } else if (marginTop == -60 && marginLeft == -150){
         scratch.style.display = 'inline'
@@ -473,7 +473,7 @@
         }, 800);
         cape = 'off'
         hautGauche()
-        perso.src = 'img/persoshg.gif'
+        perso.src = 'https://dcn.eestienne.info/kiz/workshop/img/persoshg.gif'
       } else {
         hautGauche()
       }
@@ -481,123 +481,123 @@
     } else if (e.keyCode == '39') {
       if (marginTop == 15 && marginLeft == 75){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == 30 && marginLeft == 50){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == 15 && marginLeft == -25){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == 30 && marginLeft == -50){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == 45 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -120 && marginLeft == -150){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -135 && marginLeft == -125){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -150 && marginLeft == -100){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -165 && marginLeft == -75){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -180 && marginLeft == -50){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -195 && marginLeft == -25){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -210 && marginLeft == 0){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -225 && marginLeft == 25){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -105 && marginLeft == -225){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -90 && marginLeft == -250){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -75 && marginLeft == -275){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -60 && marginLeft == -300){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -45 && marginLeft == -325){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -30 && marginLeft == -350){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else if (marginTop == -90 && marginLeft == -150){
         if (cape == 'on'){
-          perso.src = "img/persobd.png"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persobd.png"
         }  else if (cape == 'off') {
-          perso.src = "img/persosbd.gif"
+          perso.src = "https://dcn.eestienne.info/kiz/workshop/img/persosbd.gif"
         }
       } else {
         basDroite()
