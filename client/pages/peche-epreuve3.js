@@ -45,6 +45,14 @@ Template.pecheEpreuve3.events({
       fraiseColorData3.update({_id:instance.fraise3Id.get()},{$set:{activeColor:'epreuve3f3'}})
       pecheColorData3.update({_id:instance.peche3Id.get()},{$set:{activeColor:'epreuve3f3'}})
   },
+
+
+  'click #endButton': function (event, template) {
+    event.preventDefault();
+    var instance = Template.instance();
+    fraiseColorData3.update({_id:instance.fraise3Id.get()},{$set:{activeColor:'epreuve3f4'}})
+    pecheColorData3.update({_id:instance.peche3Id.get()},{$set:{activeColor:'epreuve3f4'}})
+},
 })
 
 Template.pecheEpreuve3.destroyed = function(){
