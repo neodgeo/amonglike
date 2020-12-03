@@ -18,6 +18,8 @@ import './pages/peche-epreuve3';
 import './pages/peche-epreuve3.html';
 import './pages/peche-epreuve3b';
 import './pages/peche-epreuve3b.html';
+import './pages/peche-epreuve3c';
+import './pages/peche-epreuve3c.html';
 import './pages/teams';
 import './pages/teams.html';
 import './pages/labo';

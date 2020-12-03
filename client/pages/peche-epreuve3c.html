@@ -1,6 +1,6 @@
-<template name="pecheEpreuve3">
-  <img id="scenep3" class="scene" src="img/salle3.jpg"/>
-  <img id="persop3" src="img/perso.png">
+<template name="pecheEpreuve3c">
+  <img id="scenep3c" class="scene" src="img/salle3.jpg"/>
+  <img id="persop3c" src="img/perso.png">
   <div id="chat">
     <div class="pp">
       <img src="img/peche.png" />
@@ -63,11 +63,13 @@
   }
   }
 
-  var perso = document.querySelector('#persop3'),
-  scene = document.querySelector('#scenep3'),
+  var perso = document.querySelector('#persop3c'),
+  scene = document.querySelector('#scenep3c'),
   marginLeft = 0,
-  marginTop = 0,
+  marginTop = -240,
   lock = 'off'
+
+  perso.style.marginTop  = marginTop + 'px'
 
   function hautDroite() {
     marginTop -= 15;
@@ -356,7 +358,7 @@
         }
       } else if (marginTop == -60 && marginLeft == -400){
         if (cape == 'on'){
-          perso.src = "img/persobg.png"
+          window.location = 'news'
         }  else if (cape == 'off') {
           perso.src = "img/persosbg.gif"
         }
