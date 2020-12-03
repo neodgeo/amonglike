@@ -417,3 +417,7 @@ video{
 h3.intro{
   margin-top: 100px;
 }
+
+.msg2 a {
+  text-decoration: underline;
+}
