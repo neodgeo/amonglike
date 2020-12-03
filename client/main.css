@@ -18,7 +18,7 @@ body{
 }
 
 
-p{
+#chat p{
   background: #fff;
   color: #1c1548;
   font-weight: bold;
@@ -55,6 +55,7 @@ button{
 
 #labo{
   margin-left: 20px;
+  margin-top: 20px;
   width: 900px;
 }
 
@@ -88,8 +89,8 @@ button{
 
 #persolabo{
   position: absolute;
-  padding-top: 280px;
-  padding-left: 140px;
+  padding-top: 290px;
+  padding-left: 125px;
   width: 40px;
   height: 60px;
   transition: .3s ease-in-out;
@@ -178,10 +179,10 @@ cursor: pointer;
 
 .choix_eq{
 display: flex;
-text-align: center;
+justify-content: space-around;
 width: 50vw;
 margin: auto;
-padding-left: 5%;
+text-align: center;
 }
 .choix_eq p{
   display: contents;
@@ -189,7 +190,7 @@ padding-left: 5%;
 }
 
 .choix_eq img{
-  width: 300px;
+  width: 100px;
 }
 
 h4{
@@ -382,4 +383,37 @@ video{
 #scenep3c{
   width: 1000px;
   margin-top: -40px;
+}
+
+/* INTRO */
+
+#start{
+  text-align: center;
+  padding: 20px 80px;
+  font-size: 1.5em;
+  color: #fff;
+  width: 200px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 100px;
+  display: block;
+}
+
+#start:hover{
+  cursor: pointer;
+  background: #fff;
+  color: #1c1548;
+}
+
+#intro{
+  color: #fff;
+  width: 800px;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+h3.intro{
+  margin-top: 100px;
 }

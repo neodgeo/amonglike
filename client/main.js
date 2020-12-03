@@ -26,5 +26,7 @@ import './pages/teams';
 import './pages/teams.html';
 import './pages/labo';
 import './pages/labo.html';
+import './pages/intro';
+import './pages/intro.html';
 import './pages/news';
 import './pages/news.html';
