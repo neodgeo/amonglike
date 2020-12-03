@@ -28,8 +28,11 @@ Template.pecheEpreuve2.destroyed = function(){
 };
 
 Template.pecheEpreuve2.helpers({
-    imageScene: function(){
-        var pecheColor2 = pecheColorData2.findOne({_id:Template.instance().peche2Id.get()})
-        return pecheColor2[pecheColor2.activeColor]
+  imageScene: function(){
+    if (!pecheColor2){
+      return 'refraction2-cam-on.gif'
+    } else {
+      return pecheColor2[pecheColor2.activeColor]
     }
+  }
 });

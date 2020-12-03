@@ -94,6 +94,10 @@ Template.fraiseEpreuve1.destroyed = function(){
 Template.fraiseEpreuve1.helpers({
     imageScene: function(){
         var fraiseColor = fraiseColorData.findOne({_id:Template.instance().fraiseId.get()})
-        return fraiseColor[fraiseColor.activeColor]
+        if (!fraiseColor){
+          return 'mirage1_665nm.gif'
+        } else {
+          return fraiseColor[fraiseColor.activeColor]
+        }
     }
 });

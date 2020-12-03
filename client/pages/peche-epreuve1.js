@@ -28,9 +28,12 @@ Template.pecheEpreuve1.destroyed = function(){
 };
 
 Template.pecheEpreuve1.helpers({
-    imageScene: function(){
-        var pecheColor = pecheColorData.findOne({_id:Template.instance().pecheId.get()})
+  imageScene: function(){
+      var pecheColor = pecheColorData.findOne({_id:Template.instance().pecheId.get()})
+      if (!pecheColor){
+        return 'refraction1_665nm.gif'
+      } else {
         return pecheColor[pecheColor.activeColor]
-
-    }
+      }
+  }
 });

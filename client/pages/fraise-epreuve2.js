@@ -50,7 +50,10 @@ Template.fraiseEpreuve2.destroyed = function(){
 
 Template.fraiseEpreuve2.helpers({
     imageScene: function(){
-        var fraiseColor2 = fraiseColorData2.findOne({_id:Template.instance().fraise2Id.get()})
+      if (!fraiseColor2){
+        return 'mirage2-cam-on.gif'
+      } else {
         return fraiseColor2[fraiseColor2.activeColor]
+      }
     }
 });
