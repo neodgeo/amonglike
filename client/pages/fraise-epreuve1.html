@@ -19,7 +19,6 @@
       <p class="msg1">Il semble que cette salle soit infestée de rayon de détections. </p>
       <p class="msg2">C’n’est pas bon... On ne peux pas les désactiver, seulement les changer de couleurs.</p>
       <p class="msg3">Ah, la cape est réglée pour ne marcher qu’avec une lumière de fréquence 500 nm. Tu penses qu’on pourrait rendre tous les rayons jaunes ?</p>
-      <button onclick="displayMsg()">></button>
     </div>
     <img id="livretIcon" src="img/livretoff.png" onclick="livretModal()">
     <img id="livret" src="img/schema1.png">
@@ -39,7 +38,7 @@
         modal = "off"
         livret.style.right = "-700px"
       }
-  }
+    }
 
 
     var msg1 = document.querySelector('.msg1'),
@@ -56,27 +55,16 @@
     fq665 = document.querySelector('#fq665'),
     fq700 = document.querySelector('#fq700')
 
-
-    var step = 0
-
-    function displayMsg() {
-
-    if (step == 0) {
+    setTimeout(function(){
       msg1.style.display = "block"
-      step += 1
-      console.log('msg1')
-    } else if (step == 1) {
+    }, 1000);
+    setTimeout(function(){
       msg2.style.display = "block"
-      step += 1
-      console.log('msg2')
-    } else if (step == 2) {
+    }, 3000);
+    setTimeout(function(){
       msg3.style.display = "block"
-      step += 1
-      console.log('msg3')
-    } else{
-      console.log("no more msg")
-    }
-    }
+    }, 6000);
+
     var perso = document.querySelector('#perso');
     var scene = document.querySelector('#scenef1');
     var marginLeft = 0;

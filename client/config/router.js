@@ -49,6 +49,12 @@ publicRoutes.route("/fraiseEpreuve2", {
     }
 });
 
+publicRoutes.route("/fraiseEpreuve3", {
+  action: function() {
+    BlazeLayout.render("blankLayout", { content: "fraiseEpreuve3" });
+  }
+});
+
 publicRoutes.route("/teams", {
   action: function() {
     BlazeLayout.render("blankLayout", { content: "teams" });
