@@ -443,7 +443,7 @@ h3.intro{
   bottom: 0;
 }
 
-#next{
+#next,#next2,#next3{
   background: #fff;
   font-size: 1em;
   padding: 20px 50px;
@@ -463,4 +463,55 @@ h3.intro{
 #next a{
   color: #725bfb;
   text-decoration: underline;
+}
+
+#next2 h3, #next3 h3{
+  color: #1c1548;
+  width: 100%;
+}
+
+#next2 a{
+  color: #725bfb;
+  text-decoration: underline;
+}
+
+#scenef3{
+  width: 900px;
+}
+
+#okButton{
+  background: #725bfb;
+  color: #fff;
+  width: 30px;
+  border-radius:5px;
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#okButton:hover{
+  background: #1c1548;
+}
+
+#etabliButton, #endButton{
+  background: #725bfb;
+  color: #fff;
+  width: 100px;
+  border-radius:5px;
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#etabliButton:hover{
+  background: #1c1548;
+}
+
+.text{
+  text-align: center;
+  width: 100%;
 }

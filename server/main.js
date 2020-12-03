@@ -3,6 +3,8 @@ import { pecheColorData } from '../import/api/pecheColor';
 import { fraiseColorData } from '../import/api/fraiseColor';
 import { pecheColorData2 } from '../import/api/pecheColor2';
 import { fraiseColorData2 } from '../import/api/fraiseColor2';
+import { pecheColorData3 } from '../import/api/pecheColor3';
+import { fraiseColorData3 } from '../import/api/fraiseColor3';
 
 
 Meteor.startup(() => {
@@ -11,6 +13,8 @@ Meteor.startup(() => {
   fraiseColorData.remove({})
   pecheColorData2.remove({})
   fraiseColorData2.remove({})
+  pecheColorData3.remove({})
+  fraiseColorData3.remove({})
 
   if (fraiseColorData.find().fetch() == 0) {
     fraiseColorData.insert({
@@ -55,6 +59,26 @@ Meteor.startup(() => {
       activeColor:'camOn',
       camOn:'mirage2-cam-on.gif',
       camOff:'mirage2-cam-off.gif'
+    })
+  }
+
+  if (fraiseColorData3.find().fetch() == 0) {
+    fraiseColorData3.insert({
+      activeColor:'epreuve3f1',
+      epreuve3f1:'epreuve3-f1.gif',
+      epreuve3f2:'epreuve3-f2.gif',
+      epreuve3f3:'epreuve3-f3.gif',
+      epreuve3f4:'epreuve3-f4.gif'
+    })
+  }
+
+  if (pecheColorData3.find().fetch() == 0) {
+    pecheColorData3.insert({
+      activeColor:'epreuve3f1',
+      epreuve3f1:'epreuve3-f1.gif',
+      epreuve3f2:'epreuve3-f2.gif',
+      epreuve3f3:'epreuve3-f3.gif',
+      epreuve3f4:'epreuve3-f4.gif'
     })
   }
 

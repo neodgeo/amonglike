@@ -8,14 +8,46 @@
     </div>
     <p class="msg1">On y est presque, la sortie est là-bas.</p>
     <p class="msg2">Mince ! La cape c’est déchiré. On ferait mieux de la réparer tant que nous sommes ici.</p>
+    <p class="msg3">Mince ! La cape c’est déchiré. On ferait mieux de la réparer tant que nous sommes ici.</p>
   </div>
   <img id="livretIcon" src="/img/livretoff.png" onclick="livretModal()">
   <img id="livret" src="/img/schema3.png">
   <img id="scratch" src="/img/scratch.gif">
   <img id="controle" src="/img/controle.png">
+  <div id="next">
+    <h3>Tu as déchiré ta cape !</h3>
+    <div class="text">Pour la réparer, trouve l'établi !</div>
+    <div id="okButton" onclick="hideNext()">Ok</div>
+  </div>
+  <div id="next2">
+    <h3>Tu as trouvé l'établi</h3>
+    <div class="text">Il y'a les composants nécessaires pour recontruire la cape</div>
+    <div id="etabliButton" onclick="etabli()">C'est parti</div>
+  </div>
+  <div id="next3">
+    <h3>La sortie</h3>
+    <div class="text">Vous tentez de fuire du laboratoire...</div>
+    <div id="endButton" onclick="window.location = 'news'">Suite</div>
+  </div>
+
 
   <!-- Scripts -->
   <script>
+  var next = document.querySelector('#next'),
+  next2 = document.querySelector('#next2'),
+  next3 = document.querySelector('#next3')
+
+  function hideNext() {
+    next.style.display = 'none'
+  }
+
+  function etabli() {
+    window.open('pecheEpreuve3b','_blank')
+    next2.style.display = 'none'
+    cape = 'on'
+    perso.src = '/img/persobg.png'
+  }
+
   var scratch = document.querySelector('#scratch'),
   cape = 'on'
 
@@ -231,7 +263,7 @@
         if (cape == 'on'){
           perso.src = "/img/persohd.png"
         }  else if (cape == 'off') {
-          window.location = 'pecheEpreuve3b'
+          next2.style.display = 'block'
         }
       } else if (marginTop == -255 && marginLeft == -25){
         if (cape == 'on'){
@@ -342,7 +374,7 @@
         }
       } else if (marginTop == -60 && marginLeft == -400){
         if (cape == 'on'){
-          perso.src = "/img/persobg.png"
+          next3.style.display = "block"
         }  else if (cape == 'off') {
           perso.src = "/img/persosbg.gif"
         }
@@ -473,6 +505,9 @@
         cape = 'off'
         hautGauche()
         perso.src = '/img/persoshg.gif'
+        setTimeout(function(){
+         next.style.display = 'block'
+        }, 1000);
       } else {
         hautGauche()
       }

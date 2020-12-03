@@ -10,6 +10,8 @@ import './pages/fraise-epreuve1';
 import './pages/fraise-epreuve1.html';
 import './pages/fraise-epreuve2';
 import './pages/fraise-epreuve2.html';
+import './pages/fraise-epreuve3';
+import './pages/fraise-epreuve3.html';
 import './pages/peche-epreuve1';
 import './pages/peche-epreuve1.html';
 import './pages/peche-epreuve2';
