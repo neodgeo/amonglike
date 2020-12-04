@@ -7,8 +7,8 @@
       <h4>Peche Refraction</h4>
     </div>
     <p class="msg1">On y est presque, la sortie est là-bas.</p>
-    <p class="msg2">Mince ! La cape c’est déchiré. On ferait mieux de la réparer tant que nous sommes ici.</p>
-    <p class="msg3">Mince ! La cape c’est déchiré. On ferait mieux de la réparer tant que nous sommes ici.</p>
+    <p class="msg2">Mince ! La cape c’est déchirée. On ferait mieux de la réparer tant que nous sommes ici.</p>
+    <p class="msg3">Il est temps de fuir !</p>
   </div>
   <img id="livretIcon" src="/img/livretoff.png" onclick="livretModal()">
   <img id="livret" src="/img/schema3.png">
@@ -75,11 +75,8 @@
     msg1.style.display = "block"
   }, 1000);
   setTimeout(function(){
-    msg2.style.display = "block"
-  }, 3000);
-  setTimeout(function(){
     msg3.style.display = "block"
-  }, 6000);
+  }, 45000);
 
   var perso = document.querySelector('#persop3'),
   scene = document.querySelector('#scenep3'),
@@ -499,6 +496,7 @@
         }
       } else if (marginTop == -60 && marginLeft == -150){
         scratch.style.display = 'inline'
+        msg2.style.display = "block"
         setTimeout(function(){
           scratch.style.display = 'none'
         }, 800);

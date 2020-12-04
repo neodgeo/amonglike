@@ -20,6 +20,14 @@
   </div>
 
   <script>
+  var camSwitch = document.querySelector('#camSwitch')
+
+  camSwitch.onclick = function() {
+    if (input.value == 'johnpendry'){
+      next.style.display = "block"
+    }
+  }
+
   var livretIcon = document.querySelector('#livretIcon'),
   livret = document.querySelector('#livret'),
   input = document.querySelector('#password'),
