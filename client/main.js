@@ -34,3 +34,5 @@ import './pages/start';
 import './pages/start.html';
 import './pages/news';
 import './pages/news.html';
+import './pages/credit';
+import './pages/credit.html';

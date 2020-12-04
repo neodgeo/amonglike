@@ -80,6 +80,12 @@ publicRoutes.route("/news", {
   }
 });
 
+publicRoutes.route("/credit", {
+  action: function() {
+    BlazeLayout.render("blankLayout", { content: "credit" });
+  }
+});
+
 publicRoutes.route("/intro", {
   action: function() {
     BlazeLayout.render("blankLayout", { content: "intro" });

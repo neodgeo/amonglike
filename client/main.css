@@ -550,3 +550,13 @@ h3.intro{
   position: absolute;
   top: 0;
 }
+
+
+#credit{
+  background-image: url('http://3.12.102.131:3000/img/credit.gif');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+}
