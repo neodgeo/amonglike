@@ -1,0 +1,30 @@
+<template name="fraise">
+  <img id="labo" class="scene" src="/img/fraise0.png" onclick="window.location = 'fraiseEpreuve1'"/>
+  <div id="chat">
+    <div class="pp">
+      <img src="/img/fraise.png" />
+      <h4>Fraise Mirage</h4>
+    </div>
+    <p class="msg1">Pour aider mon camarade je vais devoir me servir de ces ordinateurs</p>
+    <p class="msg2">Si je clique sur un écran je vais pouvoir accéder à la première salle</p>
+    <p class="msg3">C’est parti !</p>
+  </div>
+
+  <script>
+
+  var msg1 = document.querySelector('.msg1'),
+  msg2 = document.querySelector('.msg2'),
+  msg3 = document.querySelector('.msg3')
+
+  setTimeout(function(){
+    msg1.style.display = "block"
+  }, 1000);
+  setTimeout(function(){
+    msg2.style.display = "block"
+  }, 3000);
+  setTimeout(function(){
+    msg3.style.display = "block"
+  }, 6000);
+
+  </script>
+</template>

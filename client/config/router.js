@@ -91,3 +91,9 @@ publicRoutes.route("/intro", {
     BlazeLayout.render("blankLayout", { content: "intro" });
   }
 });
+
+publicRoutes.route("/fraise", {
+  action: function() {
+    BlazeLayout.render("blankLayout", { content: "fraise" });
+  }
+});

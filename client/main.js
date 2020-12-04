@@ -36,3 +36,5 @@ import './pages/news';
 import './pages/news.html';
 import './pages/credit';
 import './pages/credit.html';
+import './pages/fraise';
+import './pages/fraise.html';

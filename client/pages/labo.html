@@ -6,14 +6,28 @@
       <img src="/img/peche.png" />
       <h4>Peche Refraction</h4>
     </div>
-    <p class="msg1">Qu’est-ce-que c’est que cette salle ?</p>
-    <p class="msg2">Toucher ces rayons ne semblent pas une bonne idée. Dans le livret, il est dit que cette cape est réglée pour être invisible dans une lumière de fréquence 500 nm.</p>
-    <p class="msg3">C’est ça ! Ne passe que par les rayons de couleurs jaune ! </p>
+    <p class="msg1">Nous voilà dans le labo du Dr. Xingjie Nie</p>
+    <p class="msg2">En me déplaçant avec les flêcehs je vais pouvoir progresser de salle en salle.</p>
+    <p class="msg3">C’est parti ! </p>
   </div>
   <img id="controle" src="/img/controle.png">
 
 
   <script>
+  var msg1 = document.querySelector('.msg1'),
+  msg2 = document.querySelector('.msg2'),
+  msg3 = document.querySelector('.msg3')
+
+  setTimeout(function(){
+    msg1.style.display = "block"
+  }, 1000);
+  setTimeout(function(){
+    msg2.style.display = "block"
+  }, 3000);
+  setTimeout(function(){
+    msg3.style.display = "block"
+  }, 6000);
+
   var perso = document.querySelector('#persolabo'),
   scene = document.querySelector('#labo'),
   marginLeft = 0,
@@ -118,9 +132,9 @@
     if (e.keyCode == '38') {
       if (marginTop == 0 && marginLeft == 100){
         window.location = 'pecheEpreuve1'
-      } else if (marginTop == -190 && marginLeft == 275){
+      } else if (marginTop == 0 && marginLeft == 0){
         perso.src = "/img/persohd.png"
-      } else if (marginTop == -150 && marginLeft == 500){
+      } else if (marginTop == 0 && marginLeft == 50){
         perso.src = "/img/persohd.png"
       } else if (marginTop == -165 && marginLeft == 475){
         perso.src = "/img/persohd.png"
@@ -199,20 +213,20 @@
         perso.src = "/img/persobg.png"
       } else if (marginTop == -15 && marginLeft == -75){
         perso.src = "/img/persobg.png"
-      } else if (marginTop == -30 && marginLeft == -100){
+      } else if (marginTop == 30 && marginLeft == 50){
         perso.src = "/img/persobg.png"
-      } else if (marginTop == -135 && marginLeft == 475){
+      } else if (marginTop == 15 && marginLeft == 25){
         perso.src = "/img/persobg.png"
       } else {
         basGauche()
       }
     // HAUT GAUCHE
     } else if (e.keyCode == '37') {
-      if (marginTop == -90 && marginLeft == 50){
+      if (marginTop == 0 && marginLeft == 0){
         perso.src = '/img/persohg.png'
-      } else if (marginTop == -15 && marginLeft == -75){
+      } else if (marginTop == 0 && marginLeft == 50){
         perso.src = '/img/persohg.png'
-      } else if (marginTop == -75 && marginLeft == 25){
+      } else if (marginTop == 0 && marginLeft == 100){
         perso.src = '/img/persohg.png'
       } else if (marginTop == -60 && marginLeft == 0){
         perso.src = '/img/persohg.png'
@@ -275,11 +289,11 @@
         perso.src = '/img/persobd.png'
       } else if (marginTop == -105 && marginLeft == 375){
         perso.src = '/img/persobd.png'
-      } else if (marginTop == -120 && marginLeft == 400){
+      } else if (marginTop == 0 && marginLeft == 100){
         perso.src = '/img/persobd.png'
-      } else if (marginTop == -135 && marginLeft == 425){
+      } else if (marginTop == 15 && marginLeft == 75){
         perso.src = '/img/persobd.png'
-      } else if (marginTop == -150 && marginLeft == 500){
+      } else if (marginTop == 30 && marginLeft == 50){
         perso.src = '/img/persobd.png'
       } else if (marginTop == -120 && marginLeft == 500){
         window.location = 'http://localhost:3000/pecheEpreuve2'
