@@ -30,5 +30,7 @@ import './pages/labo';
 import './pages/labo.html';
 import './pages/intro';
 import './pages/intro.html';
+import './pages/start';
+import './pages/start.html';
 import './pages/news';
 import './pages/news.html';

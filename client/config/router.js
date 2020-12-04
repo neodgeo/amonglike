@@ -67,6 +67,13 @@ publicRoutes.route("/labo", {
   }
 });
 
+
+publicRoutes.route("/start", {
+  action: function() {
+    BlazeLayout.render("blankLayout", { content: "start" });
+  }
+});
+
 publicRoutes.route("/news", {
   action: function() {
     BlazeLayout.render("blankLayout", { content: "news" });

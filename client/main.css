@@ -515,3 +515,9 @@ h3.intro{
   text-align: center;
   width: 100%;
 }
+
+#startBg{
+  background-image: url('http://3.12.102.131:300/img.start.gif');
+  width: 100vw;
+  height: 100vh;
+}
