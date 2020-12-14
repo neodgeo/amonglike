@@ -522,7 +522,7 @@ h3.intro{
 }
 
 #startBg{
-  background-image: url('http://3.12.102.131:3000/img/intro.gif');
+  background-image: url('http://3.19.114.131:3000/img/intro.gif');
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -543,7 +543,7 @@ h3.intro{
 }
 
 #teams{
-  background-image: url('http://3.12.102.131:3000/img/teams.png');
+  background-image: url('http://3.19.114.131:3000/img/teams.png');
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -553,7 +553,7 @@ h3.intro{
 
 
 #credit{
-  background-image: url('http://3.12.102.131:3000/img/credit.gif');
+  background-image: url('http://3.19.114.131:3000/img/credit.gif');
   width: 80vw;
   height: 95vh;
   background-size: cover;
