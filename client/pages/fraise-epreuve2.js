@@ -35,6 +35,7 @@ Template.fraiseEpreuve2.events({
     'click #camSwitch': function (event, template) {
       if (input.value == 'johnpendry'){
         event.preventDefault();
+        next.style.display = "block"
         var instance = Template.instance();
         pecheColorData2.update({_id:instance.peche2Id.get()},{$set:{activeColor:'camOff'}})
         fraiseColorData2.update({_id:instance.fraise2Id.get()},{$set:{activeColor:'camOff'}})
